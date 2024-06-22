@@ -26,7 +26,7 @@ config.cursor_thickness = "1pt"
 config.underline_thickness = "2pt"
 
 -- config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.75
+config.window_background_opacity = 0.8
 config.macos_window_background_blur = 8
 
 -- Make font more bold
