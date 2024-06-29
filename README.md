@@ -4,7 +4,19 @@
 
 [Cheatsheets in Notion](https://tudope.notion.site/Cheatsheets-5315b36f45cd41ab899d8f4538bb0e1f?pvs=4)
 
-## Make symlinks
+## Use GNU stow
+
+Assuming you already have GNU stow on your system
+
+```
+# Assuming you are in ~/my-terminal-dotfiles
+stow .
+
+# Remove symlinks by
+stow -D .
+```
+
+## Manually make symlinks
 
 Symlinks all files in my-terminal-dotfiles to the home directory.
 
