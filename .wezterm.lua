@@ -29,6 +29,9 @@ config.underline_thickness = "2pt"
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 8
 
+-- https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+
 -- Make font more bold
 -- https://www.reddit.com/r/neovim/comments/1424lkj/the_problem_that_fonts_cannot_be_bolded_in_wezterm/
 config.font_rules = {
