@@ -82,3 +82,6 @@ function zvm_after_init() {
   eval "$(fzf --zsh)"
 } 
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+# Set alias for nvim
+alias nv="nvim"
