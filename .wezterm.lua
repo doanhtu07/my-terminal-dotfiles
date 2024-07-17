@@ -25,9 +25,9 @@ config.colors = {
 config.cursor_thickness = "1pt"
 config.underline_thickness = "2pt"
 
--- config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 8
+config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.7
+config.macos_window_background_blur = 6
 
 -- https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
