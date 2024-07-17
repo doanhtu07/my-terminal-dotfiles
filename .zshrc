@@ -7,6 +7,9 @@ fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Add postgresql (pg_dump, pg_restore) to path
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/admin/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
