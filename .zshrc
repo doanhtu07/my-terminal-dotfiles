@@ -44,6 +44,9 @@ export PATH="/Users/admin/Library/Application Support/Herd/bin/":$PATH
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/admin/Library/Application Support/Herd/config/php/82/"
 
+# Microsoft vcpkg for C++ library manager
+export VCPKG_ROOT="$HOME/vcpkg"
+
 # WezTerm binary path
 export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 
