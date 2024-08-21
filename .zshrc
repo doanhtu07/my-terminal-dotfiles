@@ -102,7 +102,7 @@ alias nv="nvim"
 # https://github.com/adeeb10abbas/ros2-docker-dev
 ros_dev() {
   # Check if the correct number of arguments were provided
-  if (( $# % 2 != 0 )); then
+  if (( $# == 0 )) || (( $# % 2 != 0 )); then
     echo "Usage: ros_dev <container_name1> <project_path1> [<container_name2> <project_path2> ...]"
     return 1
   fi
