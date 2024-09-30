@@ -24,6 +24,9 @@ You can delete any configs that you don't need for a clean symlink
 
 - Install neovim
 - Install tmux
+- Install yabai
+- Install skhd
+- Install yazi
 
 - Install eza (better ls)
 - Install zoxide (better cd)
@@ -33,3 +36,5 @@ You can delete any configs that you don't need for a clean symlink
 - Install vim mode for zsh
 - Install zsh-autosuggestions
 - Install zsh-syntax-highlighting
+
+- Install JankyBorders
