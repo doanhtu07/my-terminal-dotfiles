@@ -22,7 +22,6 @@ You can delete any configs that you don't need for a clean symlink
 - Install pyenv
 - Install nvm
 
-- Install stow
 - Install neovim
 - Install tmux
 - Install yabai
@@ -38,6 +37,7 @@ You can delete any configs that you don't need for a clean symlink
 - Install zsh-autosuggestions
 - Install zsh-syntax-highlighting
 
+- Install gh
 - Install JankyBorders
 
 ## Cool notes
