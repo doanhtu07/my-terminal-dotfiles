@@ -7,7 +7,7 @@ Assuming you already have:
 - wezterm
 - vscode
 
-## 1. Copy zshrc-mini to .zshrc inside this project
+## 1. Copy zshrc-mini to .zshrc inside `sync` folder
 
 Here I provide a more minimal zshrc for a simple setup ready to develop anyhthing!
 
