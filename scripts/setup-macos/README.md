@@ -37,7 +37,7 @@ You can delete any configs that you don't need for a clean symlink
 - Install zsh-autosuggestions
 - Install zsh-syntax-highlighting
 
-- Install gh
+- Install gh: `gh auth login`
 - Install JankyBorders
 
 ## Cool notes
