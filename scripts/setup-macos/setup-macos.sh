@@ -3,6 +3,7 @@ brew update
 brew install pyenv
 brew install nvm
 
+brew install stow
 brew install neovim
 brew install tmux
 brew install koekeishiya/formulae/yabai

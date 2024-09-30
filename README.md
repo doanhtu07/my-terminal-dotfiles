@@ -1,41 +1,25 @@
-# My dotfiles in HOME
+# My ultimate dotfiles
 
 ## My cheatsheets
 
 [Cheatsheets in Notion](https://tudope.notion.site/Cheatsheets-5315b36f45cd41ab899d8f4538bb0e1f?pvs=4)
 
-## Use GNU stow
+## My Neovim config
+
+- [Neovim config](./sync/.config/nvim/README.md)
+
+## Use GNU stow to symlink dotfiles
 
 Assuming you already have GNU stow on your system
 
-```
-# Assuming you are in ~/my-terminal-dotfiles
-stow .
-
-# Remove symlinks by
-stow -D .
-```
-
-## Manually make symlinks
-
-Symlinks all files in my-terminal-dotfiles to the home directory.
-
-- https://stackoverflow.com/questions/46534290/symlink-dotfiles
+- Assuming you are in ~/my-terminal-dotfiles
 
 ```
-cp -rsf ~/my-terminal-dotfiles/dotfiles/ ~
+stow --target=$HOME sync
 ```
 
-## List all symlinks
+- Remove symlinks by
 
 ```
-eza -l -a | grep '^l'
+stow --target=$HOME -D sync
 ```
-
-```
-ls -l -a | grep '^l'
-```
-
-## My Neovim config
-
-[Neovim config Github link](https://github.com/doanhtu07/my-neovim-config)
