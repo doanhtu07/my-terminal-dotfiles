@@ -40,9 +40,19 @@ For extra stuff, feel free to install them
 
 You can delete any configs that you don't need for a clean symlink
 
-## 4. Run `zshrc`
+## 4. Run stuff
+
+### Run `zshrc`
 
 - `source ~/.zshrc`
+
+### Reload `wezterm`
+
+- Cmd + r
+
+### Run yabai and skhd
+
+- Run `yabai --start-service` and `skhd --start-service`
 
 ## Cool notes
 
