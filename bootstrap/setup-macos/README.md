@@ -9,6 +9,8 @@ Assuming you already have:
 
 ## 1. Auto install
 
+- Set up fonts
+
 - Install pyenv
 - Install nvm
 
@@ -52,7 +54,9 @@ You can delete any configs that you don't need for a clean symlink
 
 ### Source tmux
 
+- Open a tmux session
 - `tmux source-file ~/.tmux.conf`
+- Prefix + I -> Install plugins
 
 ### Run yabai and skhd
 
