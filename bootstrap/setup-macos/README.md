@@ -11,8 +11,17 @@ Assuming you already have:
 
 - Set up fonts
 
+---
+
 - Install pyenv
 - Install nvm
+
+- Install chruby and ruby-install (https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
+
+  - Check versions at ~/.rubies/
+  - chruby 3.3.5
+
+---
 
 - Install neovim
 - Install tmux
@@ -20,14 +29,20 @@ Assuming you already have:
 - Install skhd
 - Install yazi
 
+---
+
 - Install eza (better ls)
 - Install zoxide (better cd)
 - Install fzf (better search)
+
+---
 
 - Install power10k theme
 - Install vim mode for zsh
 - Install zsh-autosuggestions
 - Install zsh-syntax-highlighting
+
+---
 
 - Install gh: `gh auth login`
 - Install JankyBorders
