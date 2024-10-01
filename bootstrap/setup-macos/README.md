@@ -50,6 +50,10 @@ You can delete any configs that you don't need for a clean symlink
 
 - Cmd + r
 
+### Source tmux
+
+- `tmux source-file ~/.tmux.conf`
+
 ### Run yabai and skhd
 
 - Run `yabai --start-service` and `skhd --start-service`
