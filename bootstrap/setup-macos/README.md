@@ -7,17 +7,7 @@ Assuming you already have:
 - wezterm
 - vscode
 
-## 1. Copy zshrc-mini to .zshrc inside `sync` folder
-
-Here I provide a more minimal zshrc for a simple setup ready to develop anyhthing!
-
-For extra stuff, feel free to install them
-
-## 2. Follow instructions in root README.md to symlink dotfiles
-
-You can delete any configs that you don't need for a clean symlink
-
-## 3. Auto install
+## 1. Auto install
 
 - Install pyenv
 - Install nvm
@@ -39,6 +29,20 @@ You can delete any configs that you don't need for a clean symlink
 
 - Install gh: `gh auth login`
 - Install JankyBorders
+
+## 2. Copy zshrc-mini to .zshrc inside `sync` folder
+
+Here I provide a more minimal zshrc for a simple setup ready to develop anyhthing!
+
+For extra stuff, feel free to install them
+
+## 3. Follow instructions in root README.md to symlink dotfiles
+
+You can delete any configs that you don't need for a clean symlink
+
+## 4. Run `zshrc`
+
+- `source ~/.zshrc`
 
 ## Cool notes
 

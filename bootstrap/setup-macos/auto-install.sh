@@ -22,5 +22,3 @@ brew install zsh-syntax-highlighting
 brew install gh
 brew tap FelixKratz/formulae
 brew install borders
-
-source ~/.zshrc
