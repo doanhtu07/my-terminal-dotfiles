@@ -10,6 +10,8 @@ brew install chruby ruby-install
 
 brew install stow
 brew install neovim
+brew install ripgrep
+brew install fd
 brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew install koekeishiya/formulae/yabai
