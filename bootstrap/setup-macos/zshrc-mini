@@ -1,3 +1,16 @@
+# === Export basic env variables ===
+
+# List all java versions: "/usr/libexec/java_home -V"
+# export JAVA_HOME=
+# export ANDROID_HOME=
+
+# WezTerm binary path
+export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
+
+# === === ===
+
+# === Set up plugins and other settings ===
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -20,13 +33,6 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# List all java versions: "/usr/libexec/java_home -V"
-# export JAVA_HOME=
-# export ANDROID_HOME=
-
-# WezTerm binary path
-export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -69,3 +75,5 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Set alias for nvim
 alias nv="nvim"
+
+# === === ===
