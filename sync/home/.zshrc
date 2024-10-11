@@ -5,6 +5,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Add postgresql (pg_dump, pg_restore) to path
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
+# Add my custom-bin to path
+export PATH="$HOME/custom-bin:$PATH"
+
 # List all java versions: "/usr/libexec/java_home -V"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
 export ANDROID_HOME=/Users/admin/Library/Android/sdk

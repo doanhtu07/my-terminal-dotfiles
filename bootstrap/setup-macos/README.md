@@ -29,6 +29,8 @@ Assuming you already have:
 - Install tmux
 - Install yabai
 - Install skhd
+- Install aerospace
+- Install raycast
 - Install yazi
 
 ---

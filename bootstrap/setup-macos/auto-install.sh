@@ -16,6 +16,8 @@ brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
+brew install --cask nikitabobko/tap/aerospace
+brew install --cask raycast
 brew install yazi
 
 brew install eza
