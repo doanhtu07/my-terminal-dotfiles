@@ -114,4 +114,8 @@ if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/admin/goo
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/admin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Set up zsh completions for databricks after `brew install databricks`
+fpath+=$(brew --prefix)/share/zsh/site-functions
+autoload -Uz compinit && compinit
+
 # === === ===
