@@ -87,6 +87,7 @@ return {
 			pickers = {
 				find_files = {
 					hidden = true, -- Search for hidden files
+					no_ignore = true, -- Include ignored files
 					-- needed to exclude some files & dirs from general search
 					-- when not included or specified in .gitignore
 					find_command = {

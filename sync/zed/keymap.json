@@ -1,0 +1,102 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+
+// Some learning examples
+// - https://github.com/zed-industries/zed/discussions/8300
+
+[
+  // Global scope
+  {
+    "bindings": {
+      // Project file search, command palette
+      "ctrl-p": "menu::SelectPrev",
+      "ctrl-n": "menu::SelectNext"
+    }
+  },
+
+  // Editor scope
+  {
+    "context": "Editor",
+    "bindings": {
+      // Format like VSCode
+      "alt-shift-f": "editor::Format",
+      "cmd-shift-i": null,
+
+      // Pane navigation
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      // Open ProjectPanel
+      "cmd-shift-e": "workspace::ToggleLeftDock"
+    }
+  },
+
+  // Menu navigation
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrev"
+    }
+  },
+
+  // Vim
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j k": ["vim::SwitchMode", "Normal"]
+    }
+  },
+
+  // Pane scope
+  {
+    "context": "Pane",
+    "bindings": {
+      // Split panes
+      "space v": "pane::SplitVertical",
+      "space h": "pane::SplitHorizontal"
+    }
+  },
+
+  // Workspace scope
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Swap pane
+      "cmd-k H": ["workspace::SwapPaneInDirection", "Left"],
+      "cmd-k J": ["workspace::SwapPaneInDirection", "Down"],
+      "cmd-k L": ["workspace::SwapPaneInDirection", "Right"],
+      "cmd-k K": ["workspace::SwapPaneInDirection", "Up"]
+    }
+  },
+
+  // ProjectPanel scope
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      // Pane navigation from ProjectPanel
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  },
+
+  // Edit
+  {
+    "context": "ProjectPanel && !editing",
+    "bindings": {
+      "cmd-shift-e": "workspace::ToggleLeftDock",
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete"
+    }
+  }
+]

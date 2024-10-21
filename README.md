@@ -20,14 +20,5 @@ I don't use Windows, so it's hard to say. But I'm sure the scripts and notes are
 
 Assuming you already have GNU stow on your system
 
-- Assuming you are in ~/my-terminal-dotfiles
-
-```
-stow --target=$HOME sync
-```
-
-- Remove symlinks by
-
-```
-stow --target=$HOME -D sync
-```
+- Assuming you are in ~/my-terminal-dotfiles, run `source ./scripts/sync.sh`
+- Remove symlinks by running `source ./scripts/unlink.sh`
