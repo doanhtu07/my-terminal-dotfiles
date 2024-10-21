@@ -6,7 +6,7 @@
 
 ## My Neovim config
 
-- [Neovim config](./sync/.config/nvim/README.md)
+[Neovim config](./sync/nvim/README.md)
 
 ## My bootstrap
 

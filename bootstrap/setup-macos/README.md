@@ -2,10 +2,11 @@
 
 Assuming you already have:
 
-- brew
-- zsh
-- wezterm
-- vscode
+- brew (macos package manager)
+- zsh (shell)
+- wezterm (terminal)
+- vscode (editor)
+- zed (fast editor - optional)
 
 ## 1. Auto install
 
@@ -71,13 +72,13 @@ You can delete any configs that you don't need for a clean symlink
 
 - Cmd + r
 
-### Source tmux
+### Source `tmux`
 
 - Open a tmux session
 - `tmux source-file ~/.tmux.conf`
 - Prefix + I -> Install plugins
 
-### Run yabai and skhd
+### Run `yabai` and `skhd`
 
 - Run `yabai --start-service` and `skhd --start-service`
 
