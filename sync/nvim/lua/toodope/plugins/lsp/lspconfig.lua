@@ -130,6 +130,28 @@ return {
 					})
 				end
 			end,
+			["ts_ls"] = function()
+				-- https://www.reddit.com/r/neovim/comments/lwz8l7/how_to_use_tsservers_organize_imports_with_nvim/
+
+				local function organize_imports()
+					local params = {
+						command = "_typescript.organizeImports",
+						arguments = { vim.api.nvim_buf_get_name(0) },
+						title = "",
+					}
+					vim.lsp.buf.execute_command(params)
+				end
+
+				lspconfig["ts_ls"].setup({
+					capabilities = capabilities,
+					commands = {
+						OrganizeImports = {
+							organize_imports,
+							description = "Organize Imports",
+						},
+					},
+				})
+			end,
 			["eslint"] = function()
 				-- https://www.reddit.com/r/neovim/comments/1aiphg8/which_is_better_nonels_or_nvimlint_conform/
 				-- https://github.com/neovim/nvim-lspconfig/blob/master/lua/lspconfig/server_configurations/eslint.lua
