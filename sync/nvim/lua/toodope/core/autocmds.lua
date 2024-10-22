@@ -17,7 +17,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 function HiCursorFunc()
-	vim.api.nvim_set_hl(0, "Cursor", { fg = "#001424", bg = "#00ff91" })
+	-- vim.api.nvim_set_hl(0, "Cursor", { fg = "#001424", bg = "#00ff91" })
+	vim.api.nvim_set_hl(0, "Cursor", { fg = "#f3deda", bg = "#f3deda" })
 end
 
 vim.api.nvim_create_autocmd("ColorScheme", {

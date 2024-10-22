@@ -30,9 +30,9 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true
 
 opt.guicursor = {
-	"n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon50-blinkoff15",
-	"i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon50-blinkoff15",
-	"r:hor50-Cursor/lCursor-blinkwait100-blinkon50-blinkoff15",
+	"n-v-c:block-Cursor/lCursor-blinkwait300-blinkon400-blinkoff400",
+	"i-ci:ver25-Cursor/lCursor-blinkwait300-blinkon400-blinkoff400",
+	"r:hor50-Cursor/lCursor-blinkwait300-blinkon400-blinkoff400",
 }
 
 -- turn on termguicolors for tokyonight colorscheme to work
