@@ -42,6 +42,7 @@ return {
 						height = { padding = 0 },
 					},
 				},
+
 				sorting_strategy = "ascending",
 
 				path_display = {
@@ -53,6 +54,7 @@ return {
 						reverse_directories = true,
 					},
 				},
+
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
@@ -61,6 +63,7 @@ return {
 						["<C-s>"] = actions.toggle_all,
 					},
 				},
+
 				-- https://stackoverflow.com/questions/71809098/how-to-include-specific-hidden-file-folder-in-search-result-when-using-telescope
 				-- Defines the command that will be used for `live_grep` and `grep_string` pickers.
 				vimgrep_arguments = {
@@ -83,30 +86,55 @@ return {
 					"--glob=!**/package-lock.json",
 				},
 			},
+
 			-- https://stackoverflow.com/questions/71809098/how-to-include-specific-hidden-file-folder-in-search-result-when-using-telescope
 			pickers = {
 				find_files = {
 					hidden = true, -- Search for hidden files
 					no_ignore = true, -- Include ignored files
+
 					-- needed to exclude some files & dirs from general search
 					-- when not included or specified in .gitignore
+
+					-- find_command = {
+					-- 	"rg",
+					-- 	"--files",
+					-- 	"--hidden",
+					-- 	"--glob=!**/.git/*",
+					-- 	"--glob=!**/.idea/*",
+					-- 	"--glob=!**/.vscode/*",
+					-- 	"--glob=!**/build/*",
+					-- 	"--glob=!**/dist/*",
+					-- 	"--glob=!**/yarn.lock",
+					-- 	"--glob=!**/package-lock.json",
+					-- },
+
 					find_command = {
-						"rg",
-						"--files",
-						"--hidden",
-						"--glob=!**/.git/*",
-						"--glob=!**/.idea/*",
-						"--glob=!**/.vscode/*",
-						"--glob=!**/build/*",
-						"--glob=!**/dist/*",
-						"--glob=!**/yarn.lock",
-						"--glob=!**/package-lock.json",
+						"fd",
+						"--type",
+						"f", -- Only search for files (equivalent to --files in rg)
+						"--hidden", -- Include hidden files
+						"--exclude",
+						".git", -- Exclude .git directory
+						"--exclude",
+						".idea", -- Exclude .idea directory
+						"--exclude",
+						".vscode", -- Exclude .vscode directory
+						"--exclude",
+						"build", -- Exclude build directory
+						"--exclude",
+						"dist", -- Exclude dist directory
+						"--exclude",
+						"yarn.lock", -- Exclude yarn.lock
+						"--exclude",
+						"package-lock.json", -- Exclude package-lock.json
 					},
 				},
 				oldfiles = {
 					cwd_only = true,
 				},
 			},
+
 			-- For plugin telescope media files to work
 			-- https://github.com/nvim-telescope/telescope-media-files.nvim?tab=readme-ov-file
 			extensions = {

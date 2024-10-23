@@ -5,6 +5,12 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Add postgresql (pg_dump, pg_restore) to path
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
+# Add flex to path
+export PATH="/usr/local/opt/flex/bin:$PATH"
+
+# Add bison to path
+export PATH="/usr/local/opt/bison/bin:$PATH"
+
 # Add my custom-bin to path
 export PATH="$HOME/custom-bin:$PATH"
 
