@@ -42,6 +42,7 @@ return {
 			local filetype = vim.filetype.match({ buf = 0 })
 			local pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
 			print(filetype)
+
 			if filetype then
 				for _, ext in ipairs(pattern) do
 					if filetype == ext then
@@ -50,6 +51,6 @@ return {
 					end
 				end
 			end
-		end, { desc = "Format file or range (in visual mode)" })
+		end, { desc = "[conform] Format file or range (in normal/visual mode)" })
 	end,
 }

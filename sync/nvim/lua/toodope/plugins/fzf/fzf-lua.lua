@@ -34,26 +34,26 @@ return {
 			fzfLua.buffers({
 				cwd_only = true,
 			})
-		end, { desc = "Fuzzy find buffers" })
+		end, { desc = "[fzf-lua] Fuzzy find buffers" })
 
 		keymap.set("n", "<leader>ff", function()
 			fzfLua.files({
 				resume = true,
 			})
-		end, { desc = "Fuzzy find files in cwd" })
+		end, { desc = "[fzf-lua] Fuzzy find files in cwd" })
 
 		keymap.set("n", "<leader>fr", function()
 			fzfLua.oldfiles({
 				cwd_only = true,
 			})
-		end, { desc = "Fuzzy find recent files" })
+		end, { desc = "[fzf-lua] Fuzzy find recent files" })
 
 		keymap.set("n", "<leader>fs", function()
 			fzfLua.live_grep_resume()
-		end, { desc = "Find string in cwd" })
+		end, { desc = "[fzf-lua] Find string in cwd" })
 
 		keymap.set("n", "<leader>fc", function()
 			fzfLua.grep_cword()
-		end, { desc = "Find string under cursor in cwd" })
+		end, { desc = "[fzf-lua] Find string under cursor in cwd" })
 	end,
 }

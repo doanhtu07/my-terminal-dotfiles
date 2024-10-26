@@ -29,41 +29,41 @@ return {
 
 				-- set keybinds
 
-				opts.desc = "Show LSP references"
+				opts.desc = "[lspconfig] Show LSP references"
 				keymap.set("n", "gR", "<cmd>FzfLua lsp_references<CR>", opts) -- show definition, references
 
-				opts.desc = "Go to declaration"
+				opts.desc = "[lspconfig] Go to declaration"
 				keymap.set("n", "gR", "<cmd>FzfLua lsp_declarations<CR>", opts) -- show definition, references
 
-				opts.desc = "Show LSP definitions"
+				opts.desc = "[lspconfig] Show LSP definitions"
 				keymap.set("n", "gd", "<cmd>FzfLua lsp_definitions<CR>", opts) -- show lsp definitions
 
-				opts.desc = "Show LSP implementations"
+				opts.desc = "[lspconfig] Show LSP implementations"
 				keymap.set("n", "gi", "<cmd>FzfLua lsp_implementations<CR>", opts) -- show lsp implementations
 
-				opts.desc = "Show LSP type definitions"
+				opts.desc = "[lspconfig] Show LSP type definitions"
 				keymap.set("n", "gt", "<cmd>FzfLua lsp_typedefs<CR>", opts) -- show lsp type definitions
 
-				opts.desc = "See available code actions"
+				opts.desc = "[lspconfig] See available code actions"
 				keymap.set({ "n", "v" }, "<leader>ca", "<cmd>FzfLua lsp_code_actions<CR>", opts) -- see available code actions, in visual mode will apply to selection
 
-				opts.desc = "Smart rename"
+				opts.desc = "[lspconfig] Smart rename"
 				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
-				opts.desc = "Show buffer diagnostics"
+				opts.desc = "[lspconfig] Show buffer diagnostics"
 				keymap.set("n", "<leader>fd", "<cmd>FzfLua lsp_document_diagnostics<CR>", opts) -- show  diagnostics for file
 				keymap.set("n", "<leader>fD", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", opts) -- show  diagnostics for file
 
-				opts.desc = "Show line diagnostics"
+				opts.desc = "[lspconfig] Show line diagnostics"
 				keymap.set("n", "<leader>D", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
-				opts.desc = "Go to previous diagnostic"
+				opts.desc = "[lspconfig] Go to previous diagnostic"
 				keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
 
-				opts.desc = "Go to next diagnostic"
+				opts.desc = "[lspconfig] Go to next diagnostic"
 				keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 
-				opts.desc = "Show documentation for what is under cursor"
+				opts.desc = "[lspconfig] Show documentation for what is under cursor"
 				keymap.set("n", "K", function()
 					local winid = require("ufo").peekFoldedLinesUnderCursor()
 					if not winid then
@@ -71,7 +71,7 @@ return {
 					end
 				end, opts) -- show documentation for what is under cursor
 
-				opts.desc = "Restart LSP"
+				opts.desc = "[lspconfig] Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 			end,
 		})

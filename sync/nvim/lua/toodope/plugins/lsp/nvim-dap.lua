@@ -5,10 +5,10 @@ return {
 
 		vim.keymap.set("n", "<leader>db", function()
 			dap.toggle_breakpoint()
-		end, { desc = "Toggle debug breakpoint" })
+		end, { desc = "[nvim-dap] Toggle debug breakpoint" })
 
 		vim.keymap.set("n", "<leader>dr", function()
 			dap.continue()
-		end, { desc = "Start or continue the debugger" })
+		end, { desc = "[nvim-dap] Start or continue the debugger" })
 	end,
 }

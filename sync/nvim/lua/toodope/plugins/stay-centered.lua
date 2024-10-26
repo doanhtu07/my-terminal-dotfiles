@@ -9,7 +9,7 @@ return {
 			{ "n", "v" },
 			"<leader>st",
 			require("stay-centered").toggle,
-			{ desc = "Toggle stay-centered.nvim" }
+			{ desc = "[stay-centered] Toggle stay-centered.nvim" }
 		)
 	end,
 }

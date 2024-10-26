@@ -13,10 +13,10 @@ return {
 
 		vim.keymap.set("n", "<leader>ng", function()
 			neogit.open()
-		end, { desc = "Open Neogit" })
+		end, { desc = "[neogit] Open Neogit" })
 
 		vim.keymap.set("n", "<leader>nd", function()
 			require("diffview").open({})
-		end, { desc = "Diff view git" })
+		end, { desc = "[neogit] Diff view git" })
 	end,
 }

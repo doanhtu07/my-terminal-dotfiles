@@ -13,20 +13,20 @@ return {
 
 		vim.keymap.set("n", "<leader>pa", function()
 			harpoon:list():add()
-		end, { desc = "Harpoon add" })
+		end, { desc = "[harpoon] Harpoon add" })
 
 		vim.keymap.set("n", "<leader>po", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
-		end, { desc = "Harpoon toggle quick menu" })
+		end, { desc = "[harpoon] Harpoon toggle quick menu" })
 
 		-- Toggle previous & next buffers stored within Harpoon list
 
 		vim.keymap.set("n", "<leader>pp", function()
 			harpoon:list():prev()
-		end, { desc = "Harpoon list previous" })
+		end, { desc = "[harpoon] Harpoon list previous" })
 
 		vim.keymap.set("n", "<leader>pn", function()
 			harpoon:list():next()
-		end, { desc = "Harpoon list next" })
+		end, { desc = "[harpoon] Harpoon list next" })
 	end,
 }
