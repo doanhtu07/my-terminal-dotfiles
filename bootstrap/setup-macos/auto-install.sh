@@ -7,6 +7,7 @@ brew install font-symbols-only-nerd-font
 brew install pyenv
 brew install nvm
 brew install chruby ruby-install
+brew install lua
 
 brew install stow
 brew install neovim

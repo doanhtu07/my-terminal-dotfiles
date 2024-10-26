@@ -22,6 +22,8 @@ Assuming you already have:
   - Check versions at ~/.rubies/
   - chruby 3.3.5
 
+- Install lua
+
 ---
 
 - Install neovim
