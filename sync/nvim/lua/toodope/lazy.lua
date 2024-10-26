@@ -23,11 +23,11 @@ require("lazy").setup({
 	{ import = "toodope.plugins.completion" },
 	{ import = "toodope.plugins.filetree" },
 	{ import = "toodope.plugins.fun" },
+	{ import = "toodope.plugins.fzf" },
 	{ import = "toodope.plugins.git" },
 	{ import = "toodope.plugins.lintformat" },
 	{ import = "toodope.plugins.lsp" },
 	{ import = "toodope.plugins.markdown" },
-	{ import = "toodope.plugins.telescope" },
 	{ import = "toodope.plugins.ui" },
 }, {
 	-- for lazy to check if there are any plugins need to update and show us

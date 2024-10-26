@@ -25,8 +25,8 @@ Assuming you already have:
 ---
 
 - Install neovim
-  - Install ripgrep (needed by `telescope`)
-  - Install fd (needed by `telescope`)
+  - Install ripgrep (needed by `telescope` and `fzf-lua`)
+  - Install fd (needed by `telescope` and `fzf-lua`)
 - Install tmux
 - Install yabai
 - Install skhd

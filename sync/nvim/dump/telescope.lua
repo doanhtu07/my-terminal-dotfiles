@@ -82,6 +82,7 @@ return {
 					"--glob=!**/.vscode/*",
 					"--glob=!**/build/*",
 					"--glob=!**/dist/*",
+					"--glob=!**/node_modules/*",
 					"--glob=!**/yarn.lock",
 					"--glob=!**/package-lock.json",
 				},
@@ -105,6 +106,7 @@ return {
 					-- 	"--glob=!**/.vscode/*",
 					-- 	"--glob=!**/build/*",
 					-- 	"--glob=!**/dist/*",
+					-- 	"--glob=!**/node_modules/*",
 					-- 	"--glob=!**/yarn.lock",
 					-- 	"--glob=!**/package-lock.json",
 					-- },
@@ -124,6 +126,8 @@ return {
 						"build", -- Exclude build directory
 						"--exclude",
 						"dist", -- Exclude dist directory
+						"--exclude",
+						"node_modules", -- Exclude node_modules directory
 						"--exclude",
 						"yarn.lock", -- Exclude yarn.lock
 						"--exclude",
