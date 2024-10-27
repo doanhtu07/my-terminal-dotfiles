@@ -30,6 +30,10 @@ brew install zsh-vi-mode
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 
+brew install fortune
+brew install figlet
+brew install cowsay
+
 brew install gh
 brew tap FelixKratz/formulae
 brew install borders

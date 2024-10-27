@@ -51,6 +51,12 @@ Assuming you already have:
 
 ---
 
+- Install fortune (ascii quotes)
+- Install figlet (words to ascii art)
+- Install cowsay (fun ascii art for quotes)
+
+---
+
 - Install gh: `gh auth login`
 - Install JankyBorders
 

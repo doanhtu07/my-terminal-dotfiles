@@ -14,9 +14,7 @@ return {
 			keymap = {
 				fzf = {
 					true, -- inherit from defaults
-					["ctrl-d"] = "half-page-down",
-					["ctrl-u"] = "half-page-up",
-					["ctrl-f"] = "toggle-all",
+					["ctrl-o"] = "toggle-all",
 				},
 			},
 			actions = {
