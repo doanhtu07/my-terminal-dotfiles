@@ -8,8 +8,16 @@ return {
 		local actions = require("fzf-lua.actions")
 
 		-- https://www.reddit.com/r/neovim/comments/1aqyfru/how_do_i_format_the_results_in_fzflua/
+		-- https://github.com/junegunn/fzf/issues/1534
+		-- https://github.com/ibhagwan/fzf-lua/issues/881
 
 		fzfLua.setup({
+			defaults = {
+				fzf_opts = {
+					["--keep-right"] = true,
+				},
+				-- formatter = "path.filename_first",
+			},
 			winopts = {
 				fullscreen = true,
 				preview = {
