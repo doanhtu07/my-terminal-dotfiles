@@ -7,9 +7,14 @@ return {
 		local fzfLua = require("fzf-lua")
 		local actions = require("fzf-lua.actions")
 
+		-- https://www.reddit.com/r/neovim/comments/1aqyfru/how_do_i_format_the_results_in_fzflua/
+
 		fzfLua.setup({
 			winopts = {
 				fullscreen = true,
+				preview = {
+					layout = "vertical",
+				},
 			},
 			keymap = {
 				fzf = {
