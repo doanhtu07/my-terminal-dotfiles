@@ -13,9 +13,6 @@ return {
 
 		fzfLua.setup({
 			defaults = {
-				fzf_opts = {
-					["--keep-right"] = true,
-				},
 				-- formatter = "path.filename_first",
 			},
 			winopts = {
@@ -35,6 +32,16 @@ return {
 					true, -- inherit from defaults actions.files
 					["ctrl-q"] = actions.file_sel_to_qf,
 					["ctrl-Q"] = actions.file_sel_to_ll,
+				},
+			},
+			files = {
+				fzf_opts = {
+					["--keep-right"] = true,
+				},
+			},
+			oldfiles = {
+				fzf_opts = {
+					["--keep-right"] = true,
 				},
 			},
 		})
