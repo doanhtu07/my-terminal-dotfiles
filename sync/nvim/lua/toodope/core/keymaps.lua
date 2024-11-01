@@ -35,6 +35,9 @@ keymap.set("n", "H", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to
 keymap.set("x", "<", "<gv", { desc = "Indent left" })
 keymap.set("x", ">", ">gv", { desc = "Indent right" })
 
+-- buffer
+keymap.set("n", "<leader>br", "<cmd>e!<CR>", { desc = "Refresh buffer" })
+
 -- text wrap
 keymap.set("n", "<leader>tw", function()
 	if vim.opt.wrap:get() == true then

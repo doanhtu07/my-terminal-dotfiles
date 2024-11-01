@@ -9,6 +9,7 @@ return {
 	enabled = true,
 	config = function()
 		vim.g.codeium_disable_bindings = 1
+		vim.g.codeium_enabled = 0
 
 		vim.keymap.set("i", "<M-Bslash>", function()
 			return vim.fn["codeium#Complete"]()
