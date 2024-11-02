@@ -15,7 +15,7 @@ return {
 				-- _G.ScLa = get_lnum_action
 				{ text = { "%s" }, click = "v:lua.ScSa", auto = true },
 				{
-					sign = { name = { "diagnostic" }, maxwidth = 1, auto = true },
+					sign = { name = { "Diagnostic" }, maxwidth = 2, auto = true },
 					click = "v:lua.ScSa",
 				},
 				{ text = { builtin.foldfunc }, click = "v:lua.ScFa" },

@@ -2,9 +2,17 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
+		{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
+		"williamboman/mason-lspconfig.nvim",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+
+		"hrsh7th/cmp-nvim-lsp", -- Allows extra capabilities provided by nvim-cmp
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/lazydev.nvim", ft = "lua", opts = {} }, -- Configures Lua Language Server
+
+		-- Useful status updates for LSP.
+		-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+		{ "j-hui/fidget.nvim", opts = {} },
 	},
 	config = function()
 		-- import lspconfig plugin
