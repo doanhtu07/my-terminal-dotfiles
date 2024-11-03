@@ -9,7 +9,8 @@ return {
 		local builtin = require("statuscol.builtin")
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
-		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+		-- local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+		local signs = { Error = "E", Warn = "W", Hint = "H", Info = "I" }
 		for type, icon in pairs(signs) do
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
@@ -33,11 +34,12 @@ return {
 				-- _G.ScFa = get_fold_action
 				-- _G.ScSa = get_sign_action
 				-- _G.ScLa = get_lnum_action
+
 				{ text = { "%s" }, click = "v:lua.ScSa", auto = true },
-				{
-					sign = { name = { "Diagnostic" }, maxwidth = 2, auto = true },
-					click = "v:lua.ScSa",
-				},
+				-- {
+				-- 	sign = { namespace = { "diagnostic/signs" }, maxwidth = 2, auto = true },
+				-- 	click = "v:lua.ScSa",
+				-- },
 				{ text = { builtin.foldfunc }, click = "v:lua.ScFa" },
 				{ text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
 			},
