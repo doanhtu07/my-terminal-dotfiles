@@ -1,8 +1,28 @@
 -- https://github.com/kevinhwang91/nvim-ufo/issues/117
 return {
 	"luukvbaal/statuscol.nvim", -- to customize the status line on the left and hide some weird numbers there
+	event = { "BufEnter" },
+	dependencies = {
+		"neovim/nvim-lspconfig",
+	},
 	config = function()
 		local builtin = require("statuscol.builtin")
+
+		-- Change the Diagnostic symbols in the sign column (gutter)
+		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+		for type, icon in pairs(signs) do
+			local hl = "DiagnosticSign" .. type
+			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+		end
+		vim.diagnostic.config({
+			virtual_text = true,
+			signs = true,
+			update_in_insert = true,
+			underline = true,
+			severity_sort = true,
+			float = true,
+		})
+
 		require("statuscol").setup({
 			-- foldfunc = "builtin",
 			-- setopt = true,
