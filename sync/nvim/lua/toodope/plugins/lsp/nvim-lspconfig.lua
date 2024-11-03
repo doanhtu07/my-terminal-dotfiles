@@ -60,6 +60,8 @@ return {
 
 				opts.desc = "[lspconfig] Show buffer diagnostics"
 				keymap.set("n", "<leader>fd", "<cmd>FzfLua lsp_document_diagnostics<CR>", opts) -- show  diagnostics for file
+
+				opts.desc = "[lspconfig] Show workspace diagnostics"
 				keymap.set("n", "<leader>fD", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", opts) -- show  diagnostics for file
 
 				opts.desc = "[lspconfig] Show line diagnostics"
