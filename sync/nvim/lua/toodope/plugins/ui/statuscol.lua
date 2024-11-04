@@ -16,7 +16,7 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 		vim.diagnostic.config({
-			virtual_text = true,
+			virtual_text = false,
 			signs = true,
 			update_in_insert = true,
 			underline = true,
