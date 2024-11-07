@@ -32,18 +32,22 @@ config.macos_window_background_blur = 6
 -- https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
+-- "JetBrains Mono"
+config.font = wezterm.font("Menlo")
+config.line_height = 1.2
+
 -- Make font more bold
 -- https://www.reddit.com/r/neovim/comments/1424lkj/the_problem_that_fonts_cannot_be_bolded_in_wezterm/
 config.font_rules = {
 	{
 		intensity = "Bold",
 		italic = false,
-		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Normal" }),
+		font = wezterm.font("Menlo", { weight = "Bold", stretch = "Normal", style = "Normal" }),
 	},
 	{
 		intensity = "Bold",
 		italic = true,
-		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Italic" }),
+		font = wezterm.font("Menlo", { weight = "Bold", stretch = "Normal", style = "Italic" }),
 	},
 }
 
