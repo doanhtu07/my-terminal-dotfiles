@@ -41,7 +41,7 @@ return {
 				keymap.set("n", "gR", "<cmd>FzfLua lsp_references<CR>", opts) -- show definition, references
 
 				opts.desc = "[lspconfig] Go to declaration"
-				keymap.set("n", "gR", "<cmd>FzfLua lsp_declarations<CR>", opts) -- show definition, references
+				keymap.set("n", "gD", "<cmd>FzfLua lsp_declarations<CR>", opts) -- show declarations
 
 				opts.desc = "[lspconfig] Show LSP definitions"
 				keymap.set("n", "gd", "<cmd>FzfLua lsp_definitions<CR>", opts) -- show lsp definitions
