@@ -75,7 +75,7 @@ return {
 						path = 1,
 					},
 					-- https://github.com/stevearc/aerial.nvim?tab=readme-ov-file#lualine
-					{ "aerial" },
+					-- { "aerial" },
 				},
 
 				-- Add a component to the X section in lualine (which is on the right) to show lazy.nvim status
