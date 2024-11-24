@@ -6,7 +6,7 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-config.max_fps = 120
+config.max_fps = 240
 
 -- For example, changing the color scheme:
 config.colors = {
