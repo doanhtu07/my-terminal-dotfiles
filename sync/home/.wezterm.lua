@@ -6,7 +6,7 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-config.max_fps = 240
+config.max_fps = 80
 
 -- For example, changing the color scheme:
 config.colors = {
@@ -32,8 +32,8 @@ config.macos_window_background_blur = 6
 -- https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
--- "JetBrains Mono"
-config.font = wezterm.font("Menlo")
+-- "JetBrains Mono", "Menlo"
+config.font = wezterm.font("JetBrains Mono")
 config.line_height = 1.2
 
 -- Make font more bold
@@ -42,12 +42,12 @@ config.font_rules = {
 	{
 		intensity = "Bold",
 		italic = false,
-		font = wezterm.font("Menlo", { weight = "Bold", stretch = "Normal", style = "Normal" }),
+		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Normal" }),
 	},
 	{
 		intensity = "Bold",
 		italic = true,
-		font = wezterm.font("Menlo", { weight = "Bold", stretch = "Normal", style = "Italic" }),
+		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Italic" }),
 	},
 }
 
