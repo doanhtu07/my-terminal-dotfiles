@@ -68,19 +68,24 @@ return {
 				},
 
 				lualine_c = {
-					-- {
-					-- 	-- https://github.com/nvim-lualine/lualine.nvim/discussions/658
-					-- 	-- :h lualine-filename-component-options
-					-- 	"filename",
-					-- 	path = 1,
-					-- },
-
-					-- https://github.com/stevearc/aerial.nvim?tab=readme-ov-file#lualine
-					-- { "aerial" },
-
 					{
 						"diagnostics",
 					},
+					{
+						-- https://github.com/nvim-lualine/lualine.nvim/discussions/658
+						-- :h lualine-filename-component-options
+						"filename",
+						symbols = {
+							modified = "●",
+							readonly = "",
+							unnamed = "[No Name]",
+							newfile = "[New]",
+						},
+						path = 1,
+					},
+
+					-- https://github.com/stevearc/aerial.nvim?tab=readme-ov-file#lualine
+					-- { "aerial" },
 				},
 
 				-- Add a component to the X section in lualine (which is on the right) to show lazy.nvim status
@@ -104,5 +109,7 @@ return {
 				},
 			},
 		})
+
+		vim.opt.laststatus = 3 -- global statusline
 	end,
 }
