@@ -1,6 +1,12 @@
 return {
-	"szw/vim-maximizer", -- This plugin is for maximize pane split
+	"declancm/maximize.nvim", -- This plugin is for maximize pane split
 	keys = {
-		{ "<leader>sm", "<cmd>MaximizerToggle<CR>", desc = "[vim-maximizer] Maximize/minimize a split" },
+		{
+			"<leader>sm",
+			function()
+				require("maximize").toggle()
+			end,
+			desc = "[maximize] Maximize/minimize a split",
+		},
 	},
 }

@@ -35,6 +35,19 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 keymap.set("x", "<", "<gv", { desc = "Indent left" })
 keymap.set("x", ">", ">gv", { desc = "Indent right" })
 
+-- print file path
+keymap.set("n", "<leader>ps", function()
+	print(vim.fn.expand("%:p"))
+end, {
+	desc = "Show file path",
+})
+keymap.set("n", "<leader>pc", function()
+	vim.cmd("let @+ = expand('%:p')")
+	print("Copied file path to clipboard")
+end, {
+	desc = "Copy file path",
+})
+
 -- buffer
 keymap.set("n", "<leader>br", "<cmd>e!<CR>", { desc = "Refresh buffer" })
 

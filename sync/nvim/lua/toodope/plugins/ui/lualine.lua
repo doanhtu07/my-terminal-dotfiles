@@ -51,6 +51,10 @@ return {
 		-- 	},
 		-- }
 
+		local function maximize_status()
+			return vim.t.maximized and " " or ""
+		end
+
 		lualine.setup({
 			options = {
 				-- theme = my_lualine_theme,
@@ -75,13 +79,14 @@ return {
 						-- https://github.com/nvim-lualine/lualine.nvim/discussions/658
 						-- :h lualine-filename-component-options
 						"filename",
+						file_status = true,
+						path = 4,
 						symbols = {
 							modified = "●",
 							readonly = "",
-							unnamed = "[No Name]",
-							newfile = "[New]",
+							unnamed = "[Empty Buffer]",
+							newfile = "[New Buffer]",
 						},
-						path = 1,
 					},
 
 					-- https://github.com/stevearc/aerial.nvim?tab=readme-ov-file#lualine
@@ -98,6 +103,7 @@ return {
 					{ "encoding" },
 					{ "fileformat" },
 					{ "filetype" },
+					{ maximize_status },
 				},
 
 				lualine_y = {

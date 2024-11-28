@@ -53,7 +53,7 @@ return {
 			-- },
 
 			view = {
-				side = "left",
+				side = "right",
 				width = 60,
 				relativenumber = true,
 			},
