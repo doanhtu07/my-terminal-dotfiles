@@ -57,11 +57,11 @@
 
   // Pane scope
   {
-    "context": "Pane",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       // Split panes
-      "space v": "pane::SplitVertical",
-      "space h": "pane::SplitHorizontal"
+      "space s v": "pane::SplitVertical",
+      "space s h": "pane::SplitHorizontal"
     }
   },
 
@@ -96,7 +96,8 @@
       "cmd-shift-e": "workspace::ToggleLeftDock",
       "a": "project_panel::NewFile",
       "r": "project_panel::Rename",
-      "d": "project_panel::Delete"
+      "d": "project_panel::Delete",
+      "c": "project_panel::CollapseAllEntries"
     }
   }
 ]

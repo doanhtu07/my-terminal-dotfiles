@@ -17,8 +17,8 @@
 
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
+    "light": "Kanagawa Lotus",
+    "dark": "Kanagawa"
   },
 
   "relative_line_numbers": true,
