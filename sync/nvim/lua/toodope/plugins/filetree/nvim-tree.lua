@@ -68,7 +68,7 @@ return {
 			actions = {
 				open_file = {
 					window_picker = {
-						enable = true,
+						enable = false,
 					},
 				},
 			},
