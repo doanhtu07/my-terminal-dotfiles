@@ -13,6 +13,7 @@ return {
 
 		lualine.setup({
 			options = {
+				globalstatus = true,
 				section_separators = { left = "", right = "" },
 				component_separators = { left = "-", right = "-" },
 			},
@@ -67,7 +68,5 @@ return {
 				},
 			},
 		})
-
-		vim.opt.laststatus = 3 -- global statusline
 	end,
 }
