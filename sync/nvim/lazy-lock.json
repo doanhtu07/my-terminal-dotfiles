@@ -16,7 +16,7 @@
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "distant.nvim": { "branch": "v0.3", "commit": "67d6b066e8490725718b79f643966f4eafc7da3c" },
   "dressing.nvim": { "branch": "master", "commit": "fc78a3ca96f4db9f8893bb7e2fd9823e0780451b" },
-  "dropbar.nvim": { "branch": "master", "commit": "b63fe2ef7cc84a2193f867a0cfb6988a1233ab31" },
+  "dropbar.nvim": { "branch": "master", "commit": "ece4eb60cc81a18c8b8f91ab109b6b7ba34f0aec" },
   "fidget.nvim": { "branch": "main", "commit": "9238947645ce17d96f30842e61ba81147185b657" },
   "flutter-tools.nvim": { "branch": "main", "commit": "85492bee069af1155bb10bfbee90ac7d4168eced" },
   "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
