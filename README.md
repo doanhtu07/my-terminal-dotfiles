@@ -12,9 +12,9 @@
 
 If you need to boot up an environment from scratch, check out the bootstrap folder.
 
-As of now, I have macos setup, but it should be the same for Linux.
+As of now, I have MacOS setup, but it should be the same for Linux.
 
-I don't use Windows, so it's hard to say. But I'm sure the scripts and notes are still useful for you.
+I don't use Windows, so it's hard to say. But I'm sure the scripts and notes are still useful. It might just need some tweaks to be compatible with Windows commands.
 
 ## Use GNU stow to symlink dotfiles
 

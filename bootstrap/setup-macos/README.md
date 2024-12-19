@@ -62,15 +62,15 @@ Assuming you already have:
 
 ## 2. Copy zshrc-mini to .zshrc inside `sync` folder
 
-Here I provide a more minimal zshrc for a simple setup ready to develop anyhthing!
+Here I provide a more minimal zshrc for a simple setup ready to develop anything!
 
 For extra stuff, feel free to install them
 
 ## 3. Follow instructions in root README.md to symlink dotfiles
 
-You can delete any configs that you don't need for a clean symlink
+You can delete any configs that you don't need for a clean symlink process
 
-## 4. Run stuff
+## 4. Run stuff after symlinking
 
 ### Run `zshrc`
 
@@ -86,11 +86,12 @@ You can delete any configs that you don't need for a clean symlink
 - `tmux source-file ~/.tmux.conf`
 - Prefix + I -> Install plugins
 
-### Run `yabai` and `skhd`
+### (Optional) Run `yabai` and `skhd`
 
+- **NOTE**: This step is optional because you can just use `aerospace` for window management instead
 - Run `yabai --start-service` and `skhd --start-service`
 
-## Cool notes
+## Cool knowledge notes
 
 - View symlinks
 

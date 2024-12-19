@@ -18,8 +18,9 @@ return {
 			win_options = {
 				wrap = true,
 			},
+			watch_for_changes = true,
 		})
 
-		vim.keymap.set("n", "<leader>of", "<cmd>Oil<cr>", { desc = "[oil] Open Oil at parent directory" })
+		vim.keymap.set("n", "-", "<cmd>Oil<cr>", { desc = "[oil] Open Oil at parent directory" })
 	end,
 }

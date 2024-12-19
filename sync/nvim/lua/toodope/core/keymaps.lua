@@ -62,7 +62,7 @@ keymap.set("n", "<leader>tw", function()
 end, { desc = "Toggle text wrap" })
 
 vim.opt.conceallevel = 0
-vim.keymap.set("n", "<leader>nt", function()
+vim.keymap.set("n", "<leader>mt", function()
 	vim.schedule(function()
 		if vim.opt.conceallevel:get() == 3 then
 			vim.opt.conceallevel = 0

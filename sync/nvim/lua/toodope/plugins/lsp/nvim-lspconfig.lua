@@ -1,3 +1,102 @@
+local lspAttachKeymaps = function()
+	local keymap = vim.keymap
+
+	vim.api.nvim_create_autocmd("LspAttach", {
+		group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+		callback = function(ev)
+			-- Buffer local mappings.
+			-- See `:help vim.lsp.*` for documentation on any of the below functions
+			local opts = { buffer = ev.buf, silent = true }
+
+			-- set keybinds
+
+			opts.desc = "[lspconfig] Show LSP references"
+			keymap.set("n", "gR", "<cmd>FzfLua lsp_references<CR>", opts) -- show definition, references
+
+			opts.desc = "[lspconfig] Go to declaration"
+			keymap.set("n", "gD", "<cmd>FzfLua lsp_declarations<CR>", opts) -- show declarations
+
+			opts.desc = "[lspconfig] Show LSP definitions"
+			keymap.set("n", "gd", "<cmd>FzfLua lsp_definitions<CR>", opts) -- show lsp definitions
+
+			opts.desc = "[lspconfig] Show LSP implementations"
+			keymap.set("n", "gi", "<cmd>FzfLua lsp_implementations<CR>", opts) -- show lsp implementations
+
+			opts.desc = "[lspconfig] Show LSP type definitions"
+			keymap.set("n", "gt", "<cmd>FzfLua lsp_typedefs<CR>", opts) -- show lsp type definitions
+
+			opts.desc = "[lspconfig] See available code actions"
+			keymap.set({ "n", "v" }, "<leader>ca", "<cmd>FzfLua lsp_code_actions<CR>", opts) -- see available code actions, in visual mode will apply to selection
+
+			opts.desc = "[lspconfig] Smart rename"
+			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+
+			opts.desc = "[lspconfig] Show buffer diagnostics"
+			keymap.set("n", "<leader>fd", "<cmd>FzfLua lsp_document_diagnostics<CR>", opts) -- show  diagnostics for file
+
+			opts.desc = "[lspconfig] Show workspace diagnostics"
+			keymap.set("n", "<leader>fD", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", opts) -- show  diagnostics for file
+
+			opts.desc = "[lspconfig] Show line diagnostics"
+			keymap.set("n", "<leader>D", vim.diagnostic.open_float, opts) -- show diagnostics for line
+
+			opts.desc = "[lspconfig] Go to previous diagnostic"
+			keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+
+			opts.desc = "[lspconfig] Go to next diagnostic"
+			keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+
+			opts.desc = "[lspconfig] Show documentation for what is under cursor"
+			keymap.set("n", "K", function()
+				local winid = require("ufo").peekFoldedLinesUnderCursor()
+				if not winid then
+					vim.lsp.buf.hover()
+				end
+			end, opts) -- show documentation for what is under cursor
+
+			opts.desc = "[lspconfig] Restart LSP"
+			keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+		end,
+	})
+end
+
+local overrideLspBorder = function()
+	local border = {
+		{ "╭", "FloatBorder" },
+		{ "─", "FloatBorder" },
+		{ "╮", "FloatBorder" },
+		{ "│", "FloatBorder" },
+		{ "╯", "FloatBorder" },
+		{ "─", "FloatBorder" },
+		{ "╰", "FloatBorder" },
+		{ "│", "FloatBorder" },
+	}
+
+	-- Override LSP floating preview border globally
+	local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+	function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+		opts = opts or {}
+		opts.border = opts.border or border
+		return orig_util_open_floating_preview(contents, syntax, opts, ...)
+	end
+end
+
+local getCapabilities = function(cmp_nvim_lsp)
+	-- used to enable autocompletion (assign to every lsp server config)
+	local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+	-- folding capabilities for nvim-ufo for better folding
+	capabilities.textDocument.foldingRange = {
+		dynamicRegistration = false,
+		lineFoldingOnly = true,
+	}
+
+	-- saw this setting in emmet_ls docs
+	capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+	return capabilities
+end
+
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
@@ -26,96 +125,10 @@ return {
 
 		require("lspconfig.ui.windows").default_options.border = "single"
 
-		local keymap = vim.keymap -- for conciseness
+		lspAttachKeymaps()
+		overrideLspBorder()
 
-		vim.api.nvim_create_autocmd("LspAttach", {
-			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-			callback = function(ev)
-				-- Buffer local mappings.
-				-- See `:help vim.lsp.*` for documentation on any of the below functions
-				local opts = { buffer = ev.buf, silent = true }
-
-				-- set keybinds
-
-				opts.desc = "[lspconfig] Show LSP references"
-				keymap.set("n", "gR", "<cmd>FzfLua lsp_references<CR>", opts) -- show definition, references
-
-				opts.desc = "[lspconfig] Go to declaration"
-				keymap.set("n", "gD", "<cmd>FzfLua lsp_declarations<CR>", opts) -- show declarations
-
-				opts.desc = "[lspconfig] Show LSP definitions"
-				keymap.set("n", "gd", "<cmd>FzfLua lsp_definitions<CR>", opts) -- show lsp definitions
-
-				opts.desc = "[lspconfig] Show LSP implementations"
-				keymap.set("n", "gi", "<cmd>FzfLua lsp_implementations<CR>", opts) -- show lsp implementations
-
-				opts.desc = "[lspconfig] Show LSP type definitions"
-				keymap.set("n", "gt", "<cmd>FzfLua lsp_typedefs<CR>", opts) -- show lsp type definitions
-
-				opts.desc = "[lspconfig] See available code actions"
-				keymap.set({ "n", "v" }, "<leader>ca", "<cmd>FzfLua lsp_code_actions<CR>", opts) -- see available code actions, in visual mode will apply to selection
-
-				opts.desc = "[lspconfig] Smart rename"
-				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
-
-				opts.desc = "[lspconfig] Show buffer diagnostics"
-				keymap.set("n", "<leader>fd", "<cmd>FzfLua lsp_document_diagnostics<CR>", opts) -- show  diagnostics for file
-
-				opts.desc = "[lspconfig] Show workspace diagnostics"
-				keymap.set("n", "<leader>fD", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", opts) -- show  diagnostics for file
-
-				opts.desc = "[lspconfig] Show line diagnostics"
-				keymap.set("n", "<leader>D", vim.diagnostic.open_float, opts) -- show diagnostics for line
-
-				opts.desc = "[lspconfig] Go to previous diagnostic"
-				keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
-
-				opts.desc = "[lspconfig] Go to next diagnostic"
-				keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
-
-				opts.desc = "[lspconfig] Show documentation for what is under cursor"
-				keymap.set("n", "K", function()
-					local winid = require("ufo").peekFoldedLinesUnderCursor()
-					if not winid then
-						vim.lsp.buf.hover()
-					end
-				end, opts) -- show documentation for what is under cursor
-
-				opts.desc = "[lspconfig] Restart LSP"
-				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
-			end,
-		})
-
-		local border = {
-			{ "╭", "FloatBorder" },
-			{ "─", "FloatBorder" },
-			{ "╮", "FloatBorder" },
-			{ "│", "FloatBorder" },
-			{ "╯", "FloatBorder" },
-			{ "─", "FloatBorder" },
-			{ "╰", "FloatBorder" },
-			{ "│", "FloatBorder" },
-		}
-
-		-- Override LSP floating preview border globally
-		local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-		function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-			opts = opts or {}
-			opts.border = opts.border or border
-			return orig_util_open_floating_preview(contents, syntax, opts, ...)
-		end
-
-		-- used to enable autocompletion (assign to every lsp server config)
-		local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-		-- folding capabilities for nvim-ufo for better folding
-		capabilities.textDocument.foldingRange = {
-			dynamicRegistration = false,
-			lineFoldingOnly = true,
-		}
-
-		-- saw this setting in emmet_ls docs
-		capabilities.textDocument.completion.completionItem.snippetSupport = true
+		local capabilities = getCapabilities(cmp_nvim_lsp)
 
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers

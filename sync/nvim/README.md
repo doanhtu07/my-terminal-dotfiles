@@ -2,21 +2,27 @@
 
 Hey guys, this is the Neovim config that I learned from Josean Martinez on Youtube "How I Setup Neovim To Make It AMAZING in 2024: The Ultimate Guide"
 
-But of course, I changed a lot throughout my experience with Neovim to fit my taste and add more notes so that I can recall some information.
+But of course, I changed it a lot while using Neovim for work to fit my taste and add more notes so that I can recall information later on.
 
-You guys can fork or clone this to use for your Neovim. Remember to watch the Youtube video by Josean to have a better understanding of each plugin is doing.
+You guys can fork or clone this to use for your Neovim.
+
+Remember to watch the Youtube video by Josean to have a better understanding of some of the plugins are doing.
+
+You should also visit the Github docs of these plugins for more information.
 
 ## Prerequisites
 
-Besides Neovim itself and many plugins, some plugins require extra packages available from your shell.
+In my config for Neovim, some plugins require extra packages available directly from your shell (your environment).
 
-I cannot recall everything since there are many dependencies from different plugins.
+I cannot recall every plugin since there are many dependencies from different plugins.
 
 Here are some of the dependencies that live outside of Neovim ecosystem:
 
 - eza (better ls)
-- fzf (Fuzzy find files)
-- fd (better find)
+- fzf (fuzzy find files)
+- fd (better find files by name)
+- ripgrep (better find files by content)
+- zoxide (better jump to directory)
 
 To know whether a plugin depends on something from your environment, check that plugin Github page and documentation.
 
