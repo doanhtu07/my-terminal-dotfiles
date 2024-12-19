@@ -19,6 +19,7 @@ return {
 				wrap = true,
 			},
 		})
+
 		vim.keymap.set("n", "<leader>of", "<cmd>Oil<cr>", { desc = "[oil] Open Oil at parent directory" })
 	end,
 }

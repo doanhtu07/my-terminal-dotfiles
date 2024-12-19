@@ -33,7 +33,7 @@ return {
 						-- :h lualine-filename-component-options
 						"filename",
 						file_status = true,
-						path = 4,
+						path = 3,
 						symbols = {
 							modified = "●",
 							readonly = "",

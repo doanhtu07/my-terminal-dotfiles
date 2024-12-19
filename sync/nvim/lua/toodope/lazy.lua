@@ -20,15 +20,17 @@ vim.opt.rtp:prepend(lazypath)
 -- Tell lazy where our plugins are
 require("lazy").setup({
 	{ import = "toodope.plugins" }, -- init.lua
-	{ import = "toodope.plugins.completion" },
-	{ import = "toodope.plugins.filetree" },
+	{ import = "toodope.plugins.files-editing" },
+	{ import = "toodope.plugins.files-navigation" },
+	{ import = "toodope.plugins.formatting" },
 	{ import = "toodope.plugins.fun" },
-	{ import = "toodope.plugins.fzf" },
 	{ import = "toodope.plugins.git" },
-	{ import = "toodope.plugins.lintformat" },
 	{ import = "toodope.plugins.lsp" },
 	{ import = "toodope.plugins.markdown" },
+	{ import = "toodope.plugins.text-completion" },
 	{ import = "toodope.plugins.ui" },
+	{ import = "toodope.plugins.utils" },
+	{ import = "toodope.plugins.windows" },
 }, {
 	-- for lazy to check if there are any plugins need to update and show us
 	checker = {
