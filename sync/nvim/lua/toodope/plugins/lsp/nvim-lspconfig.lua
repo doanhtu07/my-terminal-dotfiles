@@ -81,9 +81,10 @@ local overrideLspBorder = function()
 	end
 end
 
-local getCapabilities = function(cmp_nvim_lsp)
+local getCapabilities = function()
 	-- used to enable autocompletion (assign to every lsp server config)
-	local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
+	-- local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+	local capabilities = require("blink.cmp").get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 	-- folding capabilities for nvim-ufo for better folding
 	capabilities.textDocument.foldingRange = {
@@ -105,7 +106,9 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 
-		"hrsh7th/cmp-nvim-lsp", -- Allows extra capabilities provided by nvim-cmp
+		-- "hrsh7th/cmp-nvim-lsp", -- Allows extra capabilities provided by nvim-cmp
+		"saghen/blink.cmp",
+
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/lazydev.nvim", ft = "lua", opts = {} }, -- Configures Lua Language Server
 
@@ -120,15 +123,12 @@ return {
 		-- import mason_lspconfig plugin
 		local mason_lspconfig = require("mason-lspconfig")
 
-		-- import cmp-nvim-lsp plugin
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
 		require("lspconfig.ui.windows").default_options.border = "single"
 
 		lspAttachKeymaps()
 		overrideLspBorder()
 
-		local capabilities = getCapabilities(cmp_nvim_lsp)
+		local capabilities = getCapabilities()
 
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers

@@ -1,9 +1,8 @@
 return {
 	"Exafunction/codeium.vim",
-	version = "1.8.37", -- https://github.com/Exafunction/codeium.vim/issues/376
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"hrsh7th/nvim-cmp",
+		-- "hrsh7th/nvim-cmp",
 	},
 	event = "BufEnter",
 	enabled = true,

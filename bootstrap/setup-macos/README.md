@@ -2,6 +2,7 @@
 
 Assuming you already have:
 
+- curl
 - brew (macos package manager)
 - zsh (shell)
 - wezterm (terminal)
