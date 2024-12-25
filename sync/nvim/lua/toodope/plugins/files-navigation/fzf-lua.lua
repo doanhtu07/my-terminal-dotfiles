@@ -31,7 +31,7 @@ return {
 				files = {
 					true, -- inherit from defaults actions.files
 					["ctrl-q"] = actions.file_sel_to_qf,
-					["ctrl-Q"] = actions.file_sel_to_ll,
+					["ctrl-l"] = actions.file_sel_to_ll,
 				},
 			},
 			files = {
