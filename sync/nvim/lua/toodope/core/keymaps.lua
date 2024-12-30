@@ -42,11 +42,19 @@ keymap.set("n", "<leader>ps", function()
 end, {
 	desc = "Show file path",
 })
+-- copy file path
 keymap.set("n", "<leader>pc", function()
 	vim.cmd("let @+ = expand('%:p')")
 	print("Copied file path to clipboard")
 end, {
 	desc = "Copy file path",
+})
+-- show file type
+keymap.set("n", "<leader>ft", function()
+	local filetype = vim.filetype.match({ buf = 0 })
+	print("File type: " .. tostring(filetype))
+end, {
+	desc = "Show file type",
 })
 
 -- buffer

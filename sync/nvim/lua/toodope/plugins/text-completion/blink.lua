@@ -16,18 +16,32 @@ return {
 		-- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
 		-- See the full "keymap" documentation for information on defining your own keymap.
 		keymap = {
-			preset = "default",
+			-- preset = "default",
+			--    ['<C-space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+			--    ['<C-e>'] = { 'cancel', 'fallback' },
+			--    ['<C-y>'] = { 'select_and_accept' },
+			--    ['<C-p>'] = { 'select_prev', 'fallback' },
+			--    ['<C-n>'] = { 'select_next', 'fallback' },
+			--    ['<C-b>'] = { 'scroll_documentation_up', 'fallback' },
+			--    ['<C-f>'] = { 'scroll_documentation_down', 'fallback' },
+			--    ['<Tab>'] = { 'snippet_forward', 'fallback' },
+			--    ['<S-Tab>'] = { 'snippet_backward', 'fallback' },
+
+			["<C-s>"] = { "show", "show_documentation", "hide_documentation" },
+			["<C-e>"] = { "cancel", "fallback" },
+
+			["<CR>"] = { "accept", "fallback" },
 
 			["<C-k>"] = { "select_prev", "fallback" },
 			["<C-j>"] = { "select_next", "fallback" },
-
 			["<Up>"] = { "select_prev", "fallback" },
 			["<Down>"] = { "select_next", "fallback" },
 
-			["<C-space>"] = {}, -- conflict with Mac shortcut for switching languages
-			["<C-s>"] = { "show", "show_documentation", "hide_documentation" },
+			["<C-b>"] = { "scroll_documentation_up", "fallback" },
+			["<C-f>"] = { "scroll_documentation_down", "fallback" },
 
-			["<CR>"] = { "accept", "fallback" },
+			["<Tab>"] = { "snippet_forward", "fallback" },
+			["<S-Tab>"] = { "snippet_backward", "fallback" },
 		},
 
 		completion = {
