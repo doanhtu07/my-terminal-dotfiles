@@ -1,19 +1,25 @@
-# A mini script to setup environment on macOS
+# A mini script to setup environment on MacOS
 
-Assuming you already have:
+Before we start, you should have cloned this repo to your machine already
+
+Assuming you have installed:
 
 - curl
-- brew (macos package manager)
 - zsh (shell)
+- brew (package manager)
 - wezterm (terminal)
 - vscode (editor)
 - zed (fast editor - optional)
 
 ## 1. Auto install
 
-- Set up fonts
+Run the `auto-install.sh` script
 
----
+### Install fonts
+
+- Setup fonts
+
+### Install language tools
 
 - Install pyenv
 - Install nvm
@@ -25,41 +31,43 @@ Assuming you already have:
 
 - Install lua
 
----
+### Install neovim and cli tools
 
 - Install neovim
   - Install ripgrep (needed by `telescope` and `fzf-lua`)
   - Install fd (needed by `telescope` and `fzf-lua`)
 - Install tmux
-- Install yabai
-- Install skhd
-- Install aerospace
-- Install raycast
 - Install yazi
-
----
-
 - Install eza (better ls)
 - Install zoxide (better cd)
 - Install fzf (better search)
+- Install stow
 
----
+### Install git tools
+
+- Install git
+- Install gh: `gh auth login`
+
+### Install cli goodies
 
 - Install power10k theme
 - Install vim mode for zsh
 - Install zsh-autosuggestions
 - Install zsh-syntax-highlighting
 
----
+### Install window management
+
+- Install yabai
+- Install skhd
+- Install aerospace
+- Install raycast
+- Install JankyBorders
+
+### Install fun stuff
 
 - Install fortune (ascii quotes)
 - Install figlet (words to ascii art)
 - Install cowsay (fun ascii art for quotes)
-
----
-
-- Install gh: `gh auth login`
-- Install JankyBorders
 
 ## 2. Copy zshrc-mini to .zshrc inside `sync` folder
 
@@ -92,7 +100,7 @@ You can delete any configs that you don't need for a clean symlink process
 - **NOTE**: This step is optional because you can just use `aerospace` for window management instead
 - Run `yabai --start-service` and `skhd --start-service`
 
-## Cool knowledge notes
+## 5. Cool knowledge notes
 
 - View symlinks
 

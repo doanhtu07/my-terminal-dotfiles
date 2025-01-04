@@ -1,14 +1,11 @@
 # === Export basic env variables ===
 
-# [M1 Issue] https://stackoverflow.com/questions/7117184/brew-installation-for-zsh
-export PATH="/opt/homebrew/bin:$PATH"
-
 # List all java versions: "/usr/libexec/java_home -V"
 # export JAVA_HOME=
 # export ANDROID_HOME=
 
 # WezTerm binary path
-export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
+# export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 
 # === === ===
 

@@ -8,17 +8,38 @@
 
 [Neovim config](./sync/nvim/README.md)
 
-## My bootstrap
+## Bootstrap environment
 
-If you need to boot up an environment from scratch, check out the bootstrap folder.
+If you need to boot up an environment from scratch, check out the `bootstrap` folder.
 
 As of now, I have MacOS setup, but it should be the same for Linux.
 
-I don't use Windows, so it's hard to say. But I'm sure the scripts and notes are still useful. It might just need some tweaks to be compatible with Windows commands.
+On Windows, the setup is a little bit harder since we need to use a mix of WSL and PowerShell
 
-## Use GNU stow to symlink dotfiles
+## Manage dotfiles symlinks
 
-Assuming you already have GNU stow on your system
+---
 
-- Assuming you are in ~/my-terminal-dotfiles, run `source ./scripts/sync.sh`
-- Remove symlinks by running `source ./scripts/unlink.sh`
+**IMPORTANT NOTES**:
+
+- If you want to change the structure of the dotfiles, I recommend you to remove symlinks first
+- Then, do your changes as you want
+- Finally, re-create the symlinks
+- If you don't follow this lifecycle, you can unexpectedly break the structure of your connections
+- You might end up having to manually remove the symlinks yourselves
+
+---
+
+### Unix-like / Linux / MacOS / Windows WSL
+
+- We will use GNU stow
+- Assuming you are in `~/my-terminal-dotfiles`
+  - Create symlinks by running `source ./sync-unix-dotfiles/scripts/sync.sh`
+  - Remove symlinks by running `source ./sync-unix-dotfiles/scripts/unsync.sh`
+
+---
+
+### Windows PowerShell
+
+- We won't use any special tools but simple scripts I created
+- Assuming you are in `~/my-terminal-dotfiles`

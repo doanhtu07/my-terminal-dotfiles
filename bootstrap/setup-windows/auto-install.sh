@@ -28,13 +28,6 @@ brew install zsh-vi-mode
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 
-brew install koekeishiya/formulae/yabai
-brew install koekeishiya/formulae/skhd
-brew install --cask nikitabobko/tap/aerospace
-brew install --cask raycast
-brew tap FelixKratz/formulae
-brew install borders
-
 brew install fortune
 brew install figlet
 brew install cowsay
