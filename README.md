@@ -6,7 +6,9 @@
 
 ## My Neovim config
 
-[Neovim config](./sync/nvim/README.md)
+[MacOS Neovim config](./sync-macos-dotfiles/sync/nvim/README.md)
+
+[Linux/WSL Neovim config](./sync-wsl-dotfiles/sync/nvim/README.md)
 
 ## Bootstrap environment
 

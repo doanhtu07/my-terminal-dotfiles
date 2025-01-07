@@ -1,8 +1,17 @@
 brew update
 
 # https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e
-brew install --cask font-jetbrains-mono-nerd-font
-brew install --cask font-symbols-only-nerd-font
+# Cask are only for MacOS
+# 2 solutions: 
+# - Solution 1: https://github.com/Homebrew/homebrew-linux-fonts/tree/master
+# - Solution 2: Many other options on https://github.com/ryanoasis/nerd-fonts
+
+# brew install --cask font-jetbrains-mono-nerd-font
+# brew install --cask font-symbols-only-nerd-font
+
+brew tap homebrew/linux-fonts
+brew install font-jetbrains-mono-nerd-font
+brew install font-symbols-only-nerd-font
 
 brew install pyenv
 brew install nvm
