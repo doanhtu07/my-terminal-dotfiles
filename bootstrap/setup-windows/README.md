@@ -18,8 +18,6 @@ If you don't have the base requirements yet, I have a guide below that installs 
 **Inside PowerShell**
 
 - choco (package manager inside PowerShell)
-- wezterm (terminal)
-- vscode (editor)
 
 ---
 
@@ -33,22 +31,72 @@ If you don't have the base requirements yet, I have a guide below that installs 
 
 # Inside PowerShell
 
-```
-# Chocolatey
+## 1. Base setup
+
+- Chocolatey
+
+```ps1
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
-# Wezterm
-choco install wezterm -y
-
-# VSCode
-choco install vscode -y
 ```
 
-## 1. Follow instructions in root README.md to symlink dotfiles
+## 2. Auto install PowerShell (choco)
+
+Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShell
+
+- Right click on PowerShell app and choose `Run as Administrator`
+
+### Install terminal and editor
+
+- wezterm
+- vscode
+
+### Install Windows tools
+
+- powertoys
+  - Use by `Alt + Space`
+  - https://learn.microsoft.com/en-us/windows/powertoys/run
+
+### Install fonts
+
+- nerd-fonts-JetBrainsMono
+- nerd-fonts-NerdFontsSymbolsOnly
+
+### Install git tools
+
+- git
+- gh
+
+### Install language tools
+
+- nvm
+- pnpm
+
+### Install util tools
+
+- dos2unix: For converting Windows line endings to Unix line endings
+
+## 3. Auto install PowerShell (winget)
+
+Run the `auto-install-powershell-winget.ps1` script inside Administrator PowerShell
+
+- Right click on PowerShell app and choose `Run as Administrator`
+
+### Install window manager
+
+- glazewm
+  - Start by `glazewm start --config="$HOME\glazewm.yaml"`
+
+## 4. Follow instructions in root README.md to symlink dotfiles
 
 **NOTE**: You can delete any configs that you don't need for a clean symlink process
 
 # Inside WSL
+
+## 0. Install WSL
+
+```ps1
+wsl --install
+```
 
 ## 1. Base setup
 
@@ -77,7 +125,9 @@ chsh -s /bin/zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## 2. Auto install
+## 2. Auto install WSL (brew)
+
+Run the `auto-install-wsl.sh` script
 
 ### Install fonts
 

@@ -7,13 +7,26 @@ Assuming you have installed:
 - curl
 - zsh (shell)
 - brew (package manager)
-- wezterm (terminal)
-- vscode (editor)
-- zed (fast editor - optional)
 
-## 1. Auto install
+## 1. Base setup
+
+```
+# Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Zsh
+brew install zsh
+chsh -s /bin/zsh
+```
+
+## 2. Auto install (brew)
 
 Run the `auto-install.sh` script
+
+### Install terminal and editor
+
+- Install wezterm
+- Install vscode
 
 ### Install fonts
 
@@ -69,17 +82,17 @@ Run the `auto-install.sh` script
 - Install figlet (words to ascii art)
 - Install cowsay (fun ascii art for quotes)
 
-## 2. Copy zshrc-mini to .zshrc inside `sync` folder
+## 3. Copy zshrc-mini to .zshrc inside `sync` folder
 
 Here I provide a more minimal zshrc for a simple setup ready to develop anything!
 
 For extra stuff, feel free to install them
 
-## 3. Follow instructions in root README.md to symlink dotfiles
+## 4. Follow instructions in root README.md to symlink dotfiles
 
 You can delete any configs that you don't need for a clean symlink process
 
-## 4. Run stuff after symlinking
+## 5. Run stuff after symlinking
 
 ### Run `zshrc`
 
@@ -100,7 +113,7 @@ You can delete any configs that you don't need for a clean symlink process
 - **NOTE**: This step is optional because you can just use `aerospace` for window management instead
 - Run `yabai --start-service` and `skhd --start-service`
 
-## 5. Cool knowledge notes
+## 6. Cool knowledge notes
 
 - View symlinks
 

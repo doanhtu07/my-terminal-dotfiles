@@ -1,5 +1,8 @@
 brew update
 
+brew install --cask wezterm
+brew install --cask visual-studio-code
+
 # https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e
 brew install font-jetbrains-mono-nerd-font
 brew install font-symbols-only-nerd-font
