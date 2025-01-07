@@ -39,6 +39,12 @@ If you don't have the base requirements yet, I have a guide below that installs 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
+- Git
+
+```ps1
+choco install git -y
+```
+
 ## 2. Auto install PowerShell (choco)
 
 Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShell
@@ -63,7 +69,6 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 
 ### Install git tools
 
-- git
 - gh
 
 ### Install language tools
@@ -92,21 +97,24 @@ Run the `auto-install-powershell-winget.ps1` script inside Administrator PowerSh
 
 # Inside WSL
 
-## 0. Install WSL
+## 1. Install WSL
 
 ```ps1
 wsl --install
 ```
 
-## 1. Base setup
+## 2. Base setup
 
 - In WSL, it's technically Linux
 - Thus, we use apt to install base stuff
 - With this setup, we can also port it to Linux system
 
 - Learning links:
+
   - https://dev.to/contactsunny/installing-zsh-and-oh-my-zsh-on-windows-11-with-wsl2-1p5i
+
   - https://superuser.com/questions/1110882/how-to-change-default-shell-for-linux-susbsystem-for-windows
+
   - https://medium.com/@smitgabani/advanced-wsl-configuration-2b4888332fff
 
 ```
@@ -114,18 +122,21 @@ wsl --install
 sudo apt update
 sudo apt upgrade
 
-# Curl
-sudo apt install curl
-
 # Zsh
 sudo apt install zsh
 chsh -s /bin/zsh
 
 # Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+sudo apt install build-essential
+brew install gcc
+
+# Git
+brew install git
 ```
 
-## 2. Auto install WSL (brew)
+## 3. Auto install WSL (brew)
 
 Run the `auto-install-wsl.sh` script
 
@@ -159,7 +170,6 @@ Run the `auto-install-wsl.sh` script
 
 ### Install git tools
 
-- Install git
 - Install gh: `gh auth login`
 
 ### Install cli goodies
@@ -175,7 +185,7 @@ Run the `auto-install-wsl.sh` script
 - Install figlet (words to ascii art)
 - Install cowsay (fun ascii art for quotes)
 
-## 3. Copy zshrc-mini to .zshrc inside `sync` folder
+## 4. Copy zshrc-mini to .zshrc inside `sync` folder
 
 Here I provide a more minimal zshrc for a simple setup ready to develop anything!
 
@@ -185,11 +195,11 @@ Please put the file in `sync/home` folder
 
 - That's where we will symlink into $HOME
 
-## 4. Follow instructions in root README.md to symlink dotfiles
+## 5. Follow instructions in root README.md to symlink dotfiles
 
 **NOTE**: You can delete any configs that you don't need for a clean symlink process
 
-## 5. Run stuff after symlinking
+## 6. Run stuff after symlinking
 
 ### Run `zshrc`
 
@@ -201,7 +211,7 @@ Please put the file in `sync/home` folder
 - `tmux source-file ~/.tmux.conf`
 - Prefix + I -> Install plugins
 
-## 6. Cool knowledge notes
+## 7. Cool knowledge notes
 
 - View symlinks
 

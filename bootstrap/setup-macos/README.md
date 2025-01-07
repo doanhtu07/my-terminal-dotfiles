@@ -11,12 +11,12 @@ Assuming you have installed:
 ## 1. Base setup
 
 ```
-# Brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # Zsh
 brew install zsh
 chsh -s /bin/zsh
+
+# Git
+brew install git
 ```
 
 ## 2. Auto install (brew)

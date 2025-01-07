@@ -20,7 +20,6 @@ brew install zoxide
 brew install fzf
 brew install stow
 
-brew install git
 brew install gh
 
 brew install powerlevel10k

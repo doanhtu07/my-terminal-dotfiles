@@ -1,0 +1,6 @@
+# https://stackoverflow.com/questions/54429210/how-do-i-prevent-conda-from-activating-the-base-environment-by-default
+
+channels:
+  - defaults
+
+auto_activate_base: false
