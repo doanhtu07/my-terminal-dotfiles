@@ -58,8 +58,9 @@ Run the `auto-install.sh` script
 
 ### Install git tools
 
-- Install git
-- Install gh: `gh auth login`
+- Install gh:
+  - `gh auth login`
+  - `gh setup-git`
 
 ### Install cli goodies
 

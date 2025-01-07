@@ -171,7 +171,9 @@ Run the `auto-install-wsl.sh` script
 
 ### Install git tools
 
-- Install gh: `gh auth login`
+- Install gh:
+  - `gh auth login`
+  - `gh setup-git`
 
 ### Install cli goodies
 
