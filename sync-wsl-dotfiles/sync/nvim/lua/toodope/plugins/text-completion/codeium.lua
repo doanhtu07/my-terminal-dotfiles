@@ -14,11 +14,11 @@ return {
 			return vim.fn["codeium#Complete"]()
 		end, { expr = true, silent = true })
 
-		vim.keymap.set("i", "<M-f>", function()
+		vim.keymap.set("i", "<C-S-h>", function()
 			return vim.fn["codeium#Clear"]()
 		end, { expr = true, silent = true })
 
-		vim.keymap.set("i", "<M-tab>", function()
+		vim.keymap.set("i", "<C-tab>", function()
 			return vim.fn["codeium#Accept"]()
 		end, { expr = true, silent = true })
 
