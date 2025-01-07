@@ -19,6 +19,7 @@ brew install eza
 brew install zoxide
 brew install fzf
 brew install stow
+brew install unzip
 
 brew install gh
 

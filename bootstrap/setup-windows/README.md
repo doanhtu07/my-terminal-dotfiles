@@ -167,6 +167,7 @@ Run the `auto-install-wsl.sh` script
 - Install zoxide (better cd)
 - Install fzf (better search)
 - Install stow
+- Install unzip
 
 ### Install git tools
 
