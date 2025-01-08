@@ -1,14 +1,16 @@
 # A mini script to setup environment on MacOS
 
-Before we start, you should have cloned this repo to your machine already
+Before we start, you should have cloned this repo to your MacOS machine already
 
-Assuming you have installed:
+Assuming your machine has these tools installed:
 
 - curl
 - zsh (shell)
 - brew (package manager)
 
 ## 1. Base setup
+
+These are optional - in case MacOS doesn't have by default
 
 ```
 # Zsh
@@ -36,6 +38,7 @@ Run the `auto-install.sh` script
 
 - Install pyenv
 - Install nvm
+- Install pnpm
 
 - Install chruby and ruby-install (https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
 
@@ -85,9 +88,13 @@ Run the `auto-install.sh` script
 
 ## 3. Copy zshrc-mini to .zshrc inside `sync` folder
 
-Here I provide a more minimal zshrc for a simple setup ready to develop anything!
+In this folder `setup-macos`, I provide a more minimal zshrc (`zshrc-mini`) for a simple setup, which is ready to develop anything!
 
 For extra stuff, feel free to install them
+
+Please replace the zshrc file in `sync/home` folder
+
+- That's where we will symlink into $HOME
 
 ## 4. Follow instructions in root README.md to symlink dotfiles
 

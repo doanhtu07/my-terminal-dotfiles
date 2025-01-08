@@ -1,13 +1,13 @@
 # A mini script to setup environment on Windows
 
-For Windows, we will use a mix of WSL and PowerShell for different tools
+For Windows, we will setup a mix of WSL and PowerShell for different tools
 
 - WSL is for neovim, tmux, and other Linux-native applications
-- PowerShell is for Wezterm and window management apps
+- PowerShell is for wezterm and window management tool
 
 Thus, we will setup these 2 environments independently as if they are 2 different machines
 
-You will need to clone this repo to both your PowerShell and WSL environments
+You will need to clone this repo to both your PowerShell and WSL environments and manage them separately
 
 # Base requirements
 
@@ -18,6 +18,7 @@ If you don't have the base requirements yet, I have a guide below that installs 
 **Inside PowerShell**
 
 - choco (package manager inside PowerShell)
+- git
 
 ---
 
@@ -78,7 +79,8 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 
 ### Install util tools
 
-- dos2unix: For converting Windows line endings to Unix line endings
+- dos2unix
+  - For converting Windows line endings to Unix line endings
 
 ## 3. Auto install PowerShell (winget)
 
@@ -89,7 +91,7 @@ Run the `auto-install-powershell-winget.ps1` script inside Administrator PowerSh
 ### Install window manager
 
 - glazewm
-  - Start by `glazewm start --config="$HOME\glazewm.yaml"`
+  - Start GlazeWM by `glazewm start --config="$HOME\glazewm.yaml"`
 
 ## 4. Follow instructions in root README.md to symlink dotfiles
 
@@ -97,7 +99,7 @@ Run the `auto-install-powershell-winget.ps1` script inside Administrator PowerSh
 
 # Inside WSL
 
-## 1. Install WSL
+## 1. Install default WSL Ubuntu distro
 
 ```ps1
 wsl --install
@@ -106,7 +108,7 @@ wsl --install
 ## 2. Base setup
 
 - In WSL, it's technically Linux
-- Thus, we use apt to install base stuff
+- Thus, we use `apt` to install base stuff
 - With this setup, we can also port it to Linux system
 
 - Learning links:
@@ -148,6 +150,7 @@ Run the `auto-install-wsl.sh` script
 
 - Install pyenv
 - Install nvm
+- Install pnpm
 
 - Install chruby and ruby-install (https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
 
@@ -190,11 +193,11 @@ Run the `auto-install-wsl.sh` script
 
 ## 4. Copy zshrc-mini to .zshrc inside `sync` folder
 
-Here I provide a more minimal zshrc for a simple setup ready to develop anything!
+In this folder `setup-windows`, I provide a more minimal zshrc (`zshrc-mini`) for a simple setup, which is ready to develop anything!
 
 For extra stuff, feel free to install them
 
-Please put the file in `sync/home` folder
+Please replace the zshrc file in `sync/home` folder
 
 - That's where we will symlink into $HOME
 

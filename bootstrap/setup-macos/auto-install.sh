@@ -9,12 +9,11 @@ brew install --cask font-symbols-only-nerd-font
 
 brew install pyenv
 brew install nvm
+brew install pnpm
 brew install chruby ruby-install
 brew install lua
 
-brew install neovim
-brew install ripgrep
-brew install fd
+brew install neovim ripgrep fd
 brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew install yazi

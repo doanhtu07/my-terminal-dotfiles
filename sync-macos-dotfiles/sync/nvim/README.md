@@ -36,46 +36,49 @@ To know whether a plugin depends on something from your environment, check that 
   - https://www.reddit.com/r/neovim/comments/1603eif/adding_extra_paths_to_jedilanguageserver/
   - https://github.com/pappasam/jedi-language-server/issues/199
 
-## Quick use
+## Linux
 
-### Linux
+```bash
+sudo apt update
+sudo apt upgrade
+```
 
----
+### brew install
 
 Install homebrew to install neovim v10
 
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 Run these two commands in your terminal to add Homebrew to your PATH:
 
-```
+```bash
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /root/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
 - Install Homebrew's dependencies if you have sudo access:
 
-```
+```bash
 sudo apt-get install build-essential
 ```
 
 - We recommend that you install GCC:
 
-```
+```bash
 brew install gcc
 ```
 
 Install Neovim
 
-```
+```bash
 brew install neovim
 ```
 
 Install some stuff for Mason
 
-```
+```bash
 brew install npm
 brew install unzip
 brew install curl
@@ -83,16 +86,17 @@ brew install tar
 brew install gzip
 ```
 
----
+### Neovim Mason issues
 
-Setup config
+Each package might require different stuff to install
 
+So it's better to install each LSP that you need and fix errors if there are any
+
+But for many LSP packages, you will need python to build
+
+I usually do:
+
+```bash
+pyenv install 3.12
+pyenv global 3.12
 ```
-mkdir -p ~/.config/nvim
-
-cd ~/.config/nvim
-
-git clone https://github.com/doanhtu07/my-neovim-config.git .
-```
-
----

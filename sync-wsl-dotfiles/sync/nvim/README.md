@@ -86,15 +86,15 @@ brew install tar
 brew install gzip
 ```
 
-### Mason issues
+### Neovim Mason issues
 
 Each package might require different stuff to install
 
-So it's better to install each one that you need and fix errors if there are any
+So it's better to install each LSP that you need and fix errors if there are any
 
-But for many packages, you will need python to build
+But for many LSP packages, you will need python to build
 
-It's wise to do:
+I usually do:
 
 ```bash
 pyenv install 3.12
