@@ -142,6 +142,7 @@ window_rules:
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
+  # Resize focused window by a percentage or pixel amount.
   - name: "resize"
     keybindings:
       - commands: ["resize --width -2%"]
@@ -154,6 +155,22 @@ binding_modes:
         bindings: ["j", "down"]
       # Press enter/escape to return to default keybindings.
       - commands: ["wm-disable-binding-mode --name resize"]
+        bindings: ["escape", "enter"]
+
+  # Move the focused window's parent workspace to a monitor in a given
+  # direction.
+  - name: "move-to-monitor"
+    keybindings:
+      - commands: ["move-workspace --direction left"]
+        bindings: ["h", "left"]
+      - commands: ["move-workspace --direction right"]
+        bindings: ["l", "right"]
+      - commands: ["move-workspace --direction up"]
+        bindings: ["k", "up"]
+      - commands: ["move-workspace --direction down"]
+        bindings: ["j", "down"]
+      # Press enter/escape to return to default keybindings.
+      - commands: ["wm-disable-binding-mode --name move-to-monitor"]
         bindings: ["escape", "enter"]
 
 keybindings:
@@ -177,26 +194,19 @@ keybindings:
   - commands: ["move --direction down"]
     bindings: ["alt+shift+j"]
 
-  # Resize focused window by a percentage or pixel amount.
-  - commands: ["resize --width -2%"]
-    bindings: ["alt+u"]
-  - commands: ["resize --width +2%"]
-    bindings: ["alt+p"]
-  - commands: ["resize --height +2%"]
-    bindings: ["alt+o"]
-  - commands: ["resize --height -2%"]
-    bindings: ["alt+i"]
-
   # As an alternative to the resize keybindings above, resize mode enables
   # resizing via arrow keys or HJKL. The binding mode is defined above with
   # the name 'resize'.
   - commands: ["wm-enable-binding-mode --name resize"]
     bindings: ["alt+r"]
 
+  - commands: ["wm-enable-binding-mode --name move-to-monitor"]
+    bindings: ["alt+,"]
+
   # Disables window management and all other keybindings until alt+shift+p
   # is pressed again.
-  - commands: ["wm-toggle-pause"]
-    bindings: ["alt+shift+p"]
+  # - commands: ["wm-toggle-pause"]
+  #   bindings: ["alt+shift+p"]
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
@@ -225,7 +235,7 @@ keybindings:
 
   # Close focused window.
   - commands: ["close"]
-    bindings: ["alt+shift+q"]
+    bindings: ["alt+shift+c"]
 
   # Kill GlazeWM process safely.
   - commands: ["wm-exit"]
@@ -242,8 +252,8 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-  - commands: ["shell-exec wezterm"]
-    bindings: ["alt+enter"]
+  # - commands: ["shell-exec wezterm"]
+  #   bindings: ["alt+enter"]
 
   # Focus the next/previous active workspace defined in `workspaces` config.
   - commands: ["focus --next-active-workspace"]
@@ -253,7 +263,7 @@ keybindings:
 
   # Focus the workspace that last had focus.
   - commands: ["focus --recent-workspace"]
-    bindings: ["alt+d"]
+    bindings: ["alt+."]
 
   # Move window to workspace
   - commands: ["move --next-workspace"]
@@ -280,17 +290,6 @@ keybindings:
     bindings: ["alt+8"]
   - commands: ["focus --workspace 9"]
     bindings: ["alt+9"]
-
-  # Move the focused window's parent workspace to a monitor in a given
-  # direction.
-  - commands: ["move-workspace --direction left"]
-    bindings: ["alt+shift+a"]
-  - commands: ["move-workspace --direction right"]
-    bindings: ["alt+shift+f"]
-  - commands: ["move-workspace --direction up"]
-    bindings: ["alt+shift+d"]
-  - commands: ["move-workspace --direction down"]
-    bindings: ["alt+shift+s"]
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move --workspace 1", "focus --workspace 1"]
