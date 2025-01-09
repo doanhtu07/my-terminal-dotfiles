@@ -52,6 +52,7 @@ Run the `auto-install.sh` script
 - pgadmin4
 - dbeaver
 - redis-insight
+- docker
 
 ### Install neovim and cli tools
 

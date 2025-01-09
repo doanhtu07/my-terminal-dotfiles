@@ -65,6 +65,12 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 - wezterm
 - vscode
 
+### Install dev tools
+
+- pgadmin4
+- dbeaver
+- docker-desktop
+
 ### Install Windows tools
 
 - powertoys
@@ -84,11 +90,6 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 
 - nvm
 - pnpm
-
-### Install dev tools
-
-- pgadmin4
-- dbeaver
 
 ### Install util tools
 

@@ -16,6 +16,7 @@ brew install lua
 brew install --cask pgadmin4
 brew install --cask dbeaver-community
 brew install --cask redis-insight
+brew install --cask docker
 
 brew install neovim ripgrep fd
 brew install tmux
