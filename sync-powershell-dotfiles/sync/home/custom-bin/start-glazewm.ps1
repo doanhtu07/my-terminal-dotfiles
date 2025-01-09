@@ -1,0 +1,1 @@
+glazewm start --config="$HOME\glazewm.yaml"
