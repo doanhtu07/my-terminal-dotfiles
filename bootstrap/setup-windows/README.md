@@ -30,6 +30,14 @@ If you don't have the base requirements yet, I have a guide below that installs 
 
 ---
 
+# Manual install dev software
+
+- Redis Insight:
+
+  - Not available on winget or choco yet
+  - Only downloadable through their website
+  - You can also install with brew inside WSL
+
 # Inside PowerShell
 
 ## 1. Base setup
@@ -77,6 +85,11 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 - nvm
 - pnpm
 
+### Install dev tools
+
+- pgadmin4
+- dbeaver
+
 ### Install util tools
 
 - dos2unix
@@ -91,7 +104,7 @@ Run the `auto-install-powershell-winget.ps1` script inside Administrator PowerSh
 ### Install window manager
 
 - glazewm
-  - Start GlazeWM by `glazewm start --config="$HOME\glazewm.yaml"`
+  - Start GlazeWM by `glazewm start --config="$HOME\glazewm.yaml"` or my own shortcut script `Start-Glazewm` in powershell
 
 ## 4. Follow instructions in root README.md to symlink dotfiles
 

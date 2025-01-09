@@ -13,6 +13,10 @@ brew install pnpm
 brew install chruby ruby-install
 brew install lua
 
+brew install --cask pgadmin4
+brew install --cask dbeaver-community
+brew install --cask redis-insight
+
 brew install neovim ripgrep fd
 brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

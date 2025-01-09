@@ -13,4 +13,7 @@ choco install gh -y
 choco install nvm -y
 choco install pnpm -y
 
+choco install pgadmin4 -y
+choco install dbeaver -y
+
 choco install dos2unix -y

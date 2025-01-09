@@ -47,6 +47,12 @@ Run the `auto-install.sh` script
 
 - Install lua
 
+### Install dev tools
+
+- pgadmin4
+- dbeaver
+- redis-insight
+
 ### Install neovim and cli tools
 
 - Install neovim
