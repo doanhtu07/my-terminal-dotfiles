@@ -51,6 +51,7 @@ Run the `auto-install.sh` script
 
 - pgadmin4
 - dbeaver
+- beekeeper-studio
 - redis-insight
 - docker
 

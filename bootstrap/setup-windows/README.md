@@ -69,6 +69,7 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 
 - pgadmin4
 - dbeaver
+- beekeeper-studio
 - docker-desktop
 
 ### Install Windows tools
