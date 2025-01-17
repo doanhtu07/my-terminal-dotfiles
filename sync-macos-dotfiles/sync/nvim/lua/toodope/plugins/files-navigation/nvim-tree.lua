@@ -76,6 +76,10 @@ return {
 			filters = {
 				git_ignored = false,
 			},
+
+			diagnostics = {
+				enable = true,
+			},
 		})
 
 		-- set keymaps
