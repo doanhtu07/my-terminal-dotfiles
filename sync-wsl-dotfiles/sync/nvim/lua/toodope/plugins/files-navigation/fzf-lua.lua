@@ -44,6 +44,9 @@ return {
 					["--keep-right"] = true,
 				},
 			},
+			grep = {
+				rg_glob = true, -- https://github.com/ibhagwan/fzf-lua/discussions/1501
+			},
 		})
 
 		local keymap = vim.keymap -- for conciseness

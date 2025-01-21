@@ -69,8 +69,9 @@ keymap.set("n", "<leader>tw", function()
 	end
 end, { desc = "Toggle text wrap" })
 
+-- toggle concealer (useful for markdown)
 vim.opt.conceallevel = 0
-vim.keymap.set("n", "<leader>mt", function()
+keymap.set("n", "<leader>mt", function()
 	vim.schedule(function()
 		if vim.opt.conceallevel:get() == 3 then
 			vim.opt.conceallevel = 0
@@ -80,3 +81,11 @@ vim.keymap.set("n", "<leader>mt", function()
 		require("render-markdown").toggle()
 	end)
 end, { desc = "Toggle concealer" })
+
+-- quickfix and location lists navigation
+keymap.set("n", "<leader>qn", "<cmd>cnext<CR>", { desc = "Next quickfix item" })
+keymap.set("n", "<leader>qp", "<cmd>cprev<CR>", { desc = "Previous quickfix item" })
+keymap.set("n", "<leader>qc", "<cmd>cclose<CR>", { desc = "Close quickfix item" })
+keymap.set("n", "<leader>ln", "<cmd>lnext<CR>", { desc = "Next location list item" })
+keymap.set("n", "<leader>lp", "<cmd>lprev<CR>", { desc = "Previous location list item" })
+keymap.set("n", "<leader>lc", "<cmd>lclose<CR>", { desc = "Close location list item" })
