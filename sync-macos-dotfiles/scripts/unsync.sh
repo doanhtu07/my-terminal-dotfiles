@@ -1,6 +1,6 @@
 # Assuming you are running the script at `~/my-terminal-dotfiles`
 
-cd ./sync-unix-dotfiles/sync
+cd ./sync-macos-dotfiles/sync
 
 stow --target=$HOME -D home
 

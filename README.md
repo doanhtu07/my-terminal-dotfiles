@@ -39,7 +39,7 @@ On Windows, the setup is a little bit harder since we need to setup a mix of WSL
 ### MacOS symlinks
 
 - We will use GNU stow for symlink management
-- Assuming you are in `~/my-terminal-dotfiles`
+- Assuming you are in `my-terminal-dotfiles` folder
   - Create symlinks by running `source ./sync-macos-dotfiles/scripts/sync.sh`
   - Remove symlinks by running `source ./sync-macos-dotfiles/scripts/unsync.sh`
 
@@ -48,7 +48,7 @@ On Windows, the setup is a little bit harder since we need to setup a mix of WSL
 ### Windows PowerShell
 
 - We won't use any special tools but simple scripts I created which work similarly to GNU stow
-- Assuming you are in `~/my-terminal-dotfiles`
+- Assuming you are in `my-terminal-dotfiles` folder
   - Create symlinks by running `. .\sync-powershell-dotfiles\scripts\sync.ps1`
   - Remove symlinks by running `. .\sync-powershell-dotfiles\scripts\unsync.ps1`
 
@@ -57,6 +57,6 @@ On Windows, the setup is a little bit harder since we need to setup a mix of WSL
 ### Windows WSL
 
 - We will use GNU stow for symlink management
-- Assuming you are in `~/my-terminal-dotfiles`
+- Assuming you are in `my-terminal-dotfiles` folder
   - Create symlinks by running `source ./sync-wsl-dotfiles/scripts/sync.sh`
   - Remove symlinks by running `source ./sync-wsl-dotfiles/scripts/unsync.sh`
