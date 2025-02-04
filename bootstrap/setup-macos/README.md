@@ -124,6 +124,13 @@ You can delete any configs that you don't need for a clean symlink process
 - `tmux source-file ~/.tmux.conf`
 - Prefix + I -> Install plugins
 
+**NOTES**:
+
+- If tmux plugins somehow don't work as expected, just force remove the folder `~/.tmux/plugins`
+- Then `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+- Create a new tmux session and run `tmux source-file ~/.tmux.conf`
+- Do Prefix + I again to re-install plugins
+
 ### (Optional) Run `yabai` and `skhd`
 
 - **NOTE**: This step is optional because you can just use `aerospace` for window management instead
