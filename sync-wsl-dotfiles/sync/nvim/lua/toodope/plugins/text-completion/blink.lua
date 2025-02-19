@@ -64,10 +64,10 @@ return {
 			-- Default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			default = { "lsp", "path", "snippets", "buffer" },
-
-			-- Disable cmdline completions
-			cmdline = {},
 		},
+
+		-- Disable cmdline completions
+		cmdline = { enabled = false },
 	},
 
 	opts_extend = { "sources.default" },
