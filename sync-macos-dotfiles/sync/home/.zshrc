@@ -151,8 +151,9 @@ function zvm_after_init() {
 } 
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# Set alias for nvim
+# Set aliases
 alias nv="nvim"
+alias vf='fzf -m | xargs -r code' # Open selected files in VS Code
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/path.zsh.inc'; fi
