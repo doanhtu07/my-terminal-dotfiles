@@ -153,7 +153,10 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Set aliases
 alias nv="nvim"
-alias vf='fzf -m | xargs -r code' # Open selected files in VS Code
+alias fp='fzf -m --layout=reverse --preview "bat --style=numbers --color=always {}"' # fzf with preview
+alias fg='git diff --name-only | fzf -m --layout=reverse --preview "git diff --color=always {}" | xargs -r git diff | diff-so-fancy' # git diff with preview
+alias fgs='git diff --staged --name-only | fzf -m --layout=reverse --preview "git diff --staged --color=always {}" | xargs -r git diff --staged | diff-so-fancy' # git diff with preview
+alias fv='fp | xargs -r code' # Open selected files in VS Code
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/path.zsh.inc'; fi

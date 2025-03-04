@@ -2,7 +2,7 @@ brew update
 
 # https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e
 # Cask are only for MacOS
-# 2 solutions: 
+# 2 solutions:
 # - Solution 1: https://github.com/Homebrew/homebrew-linux-fonts/tree/master
 # - Solution 2: Many other options on https://github.com/ryanoasis/nerd-fonts
 
@@ -26,6 +26,8 @@ brew install yazi
 brew install eza
 brew install zoxide
 brew install fzf
+brew install bat
+brew install diff-so-fancy
 brew install stow
 brew install unzip
 

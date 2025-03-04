@@ -65,6 +65,8 @@ Run the `auto-install.sh` script
 - Install eza (better ls)
 - Install zoxide (better cd)
 - Install fzf (better search)
+- Install bat (file preview with syntax highlighting)
+- Install diff-so-fancy (better git diff view)
 - Install stow
 
 ### Install git tools

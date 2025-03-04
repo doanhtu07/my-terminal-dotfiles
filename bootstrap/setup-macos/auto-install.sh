@@ -26,6 +26,8 @@ brew install yazi
 brew install eza
 brew install zoxide
 brew install fzf
+brew install bat
+brew install diff-so-fancy
 brew install stow
 
 brew install gh
