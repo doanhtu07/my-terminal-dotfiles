@@ -79,9 +79,9 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Set alias for nvim
 alias nv="nvim"
-alias fp='fzf -m --layout=reverse --preview "bat --style=numbers --color=always {}"' # fzf with preview
-alias fg='git diff --name-only | fzf -m --layout=reverse --preview "git diff --color=always {}" | xargs -r git diff | diff-so-fancy' # git diff with preview
-alias fgs='git diff --staged --name-only | fzf -m --layout=reverse --preview "git diff --staged --color=always {}" | xargs -r git diff --staged | diff-so-fancy' # git diff with preview
-alias fv='fp | xargs -r code' # Open selected files in VS Code
+alias fzff='fzf -m --layout=reverse --preview "bat --style=numbers --color=always {}"' # fzf with preview
+alias fzfd='find . -type d | fzf -m --layout=reverse' # fzf directory
+alias fzfcd='DIR=$(fzfd) && cd $DIR' # fzf directory and cd
+alias fzfv='fp | xargs -r code' # Open selected files in VS Code
 
 # === === ===
