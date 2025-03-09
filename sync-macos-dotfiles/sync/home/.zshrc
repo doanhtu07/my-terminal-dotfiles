@@ -156,7 +156,7 @@ alias nv="nvim"
 alias fzff='fzf -m --layout=reverse --preview "bat --style=numbers --color=always {}"' # fzf with preview
 alias fzfd='find . -type d | fzf -m --layout=reverse' # fzf directory
 alias fzfcd='DIR=$(fzfd) && cd $DIR' # fzf directory and cd
-alias fzfv='fp | xargs -r code' # Open selected files in VS Code
+alias fzfv='fzff | xargs -r code' # Open selected files in VS Code
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/path.zsh.inc'; fi
