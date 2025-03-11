@@ -4,6 +4,9 @@
 # export JAVA_HOME=
 # export ANDROID_HOME=
 
+# Editor used by yazi
+export EDITOR=code
+
 # === === ===
 
 # === Set up plugins and other settings ===

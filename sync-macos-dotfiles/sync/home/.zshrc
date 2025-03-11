@@ -69,6 +69,9 @@ export VCPKG_ROOT="$HOME/vcpkg"
 # WezTerm binary path
 export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 
+# Editor used by yazi
+export EDITOR=code
+
 # === === ===
 
 # === Set up plugins and other settings ===
