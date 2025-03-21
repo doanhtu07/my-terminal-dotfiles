@@ -112,6 +112,12 @@ Run the `auto-install-powershell-winget.ps1` script inside Administrator PowerSh
 
 **NOTE**: You can delete any configs that you don't need for a clean symlink process
 
+## 5. Optional manual downloads
+
+- Github monaspace font: `https://github.com/githubnext/monaspace`
+  - Clone repo down and follow its instructions for Windows
+  - On Windows, when right-click on a font, select `Show more options` and you will see `Install for all users`
+
 # Inside WSL
 
 ## 1. Install default WSL Ubuntu distro
