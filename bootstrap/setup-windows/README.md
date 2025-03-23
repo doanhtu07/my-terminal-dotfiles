@@ -54,6 +54,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install git -y
 ```
 
+- Scoop
+
+```ps1
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
 ## 2. Auto install PowerShell (choco)
 
 Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShell
@@ -97,7 +104,24 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 - dos2unix
   - For converting Windows line endings to Unix line endings
 
-## 3. Auto install PowerShell (winget)
+## 3. Auto install PowerShell (scoop)
+
+**NOTES**:
+
+- scoop installs packages per-user by default
+- To install packages globally, use `sudo scoop install -g <packages>`
+
+### Install cli tools
+
+- yazi
+  - Recommended dependencies:
+    - ffmpeg, 7zip, poppler, fd, zoxide
+    - fzf, bat, less
+    - jq, jid
+    - imagemagick, ghostscript
+    - ripgrep, extras/vcredist2022
+
+## 4. Auto install PowerShell (winget)
 
 Run the `auto-install-powershell-winget.ps1` script inside Administrator PowerShell
 
@@ -108,11 +132,11 @@ Run the `auto-install-powershell-winget.ps1` script inside Administrator PowerSh
 - glazewm
   - Start GlazeWM by `glazewm start --config="$HOME\glazewm.yaml"` or my own shortcut script `Start-Glazewm` in powershell
 
-## 4. Follow instructions in root README.md to symlink dotfiles
+## 5. Follow instructions in root README.md to symlink dotfiles
 
 **NOTE**: You can delete any configs that you don't need for a clean symlink process
 
-## 5. Optional manual downloads
+## 6. Optional manual downloads
 
 - Github monaspace font: `https://github.com/githubnext/monaspace`
   - Clone repo down and follow its instructions for Windows

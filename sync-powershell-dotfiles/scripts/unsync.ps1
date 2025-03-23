@@ -6,4 +6,6 @@ Set-Location .\sync-powershell-dotfiles\sync
 
 ..\scripts\utils\unlink-folder.ps1 -sourceFolder ".\WindowsPowerShell" -destinationFolder "$HOME\Documents\WindowsPowerShell"
 
+..\scripts\utils\unlink-folder.ps1 -sourceFolder ".\yazi" -destinationFolder "$env:AppData\yazi\config"
+
 Set-Location ..\..
