@@ -7,6 +7,7 @@ choco install pgadmin4 -y
 choco install dbeaver -y
 choco install beekeeper-studio -y
 choco install docker-desktop -y
+choco install postman -y
 
 choco install powertoys -y
 
