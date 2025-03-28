@@ -32,8 +32,8 @@ config.macos_window_background_blur = 3
 -- https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
--- "JetBrains Mono", "Menlo"
-config.font = wezterm.font("JetBrains Mono")
+-- "Monaspace Argon", "JetBrains Mono", "Menlo"
+config.font = wezterm.font("Monaspace Argon")
 config.line_height = 1.2
 
 -- Make font more bold
@@ -42,12 +42,12 @@ config.font_rules = {
 	{
 		intensity = "Bold",
 		italic = false,
-		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Normal" }),
+		font = wezterm.font("Monaspace Argon", { weight = "Bold", stretch = "Normal", style = "Normal" }),
 	},
 	{
 		intensity = "Bold",
 		italic = true,
-		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Italic" }),
+		font = wezterm.font("Monaspace Argon", { weight = "Bold", stretch = "Normal", style = "Italic" }),
 	},
 }
 
