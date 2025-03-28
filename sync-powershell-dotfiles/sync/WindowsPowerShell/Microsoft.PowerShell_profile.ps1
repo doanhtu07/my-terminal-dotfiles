@@ -8,6 +8,10 @@ Set-Alias -Name Symlink-Folder -Value "$HOME\custom-bin\symlink-folder.ps1"
 
 Set-Alias -Name Unlink-Folder -Value "$HOME\custom-bin\unlink-folder.ps1"
 
+# yazi Windows setup: https://yazi-rs.github.io/docs/installation/#windows
+
+$env:YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"
+
 # fzf with preview
 function fzff {
   fzf -m --layout=reverse --preview "bat --style=numbers --color=always {}"
