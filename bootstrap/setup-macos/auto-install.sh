@@ -47,3 +47,4 @@ brew install borders
 brew install fortune
 brew install figlet
 brew install cowsay
+brew install --cask karabiner-elements

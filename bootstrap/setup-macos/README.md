@@ -95,6 +95,7 @@ Run the `auto-install.sh` script
 - Install fortune (ascii quotes)
 - Install figlet (words to ascii art)
 - Install cowsay (fun ascii art for quotes)
+- Install karabiner elements
 
 ## 3. Copy zshrc-mini to .zshrc inside `sync` folder
 
