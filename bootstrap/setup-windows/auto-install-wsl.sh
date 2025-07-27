@@ -14,6 +14,7 @@ brew install font-jetbrains-mono-nerd-font
 brew install font-symbols-only-nerd-font
 
 brew install pyenv
+brew install jenv
 brew install nvm
 brew install pnpm
 brew install chruby ruby-install

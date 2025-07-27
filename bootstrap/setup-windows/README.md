@@ -195,6 +195,7 @@ Run the `auto-install-wsl.sh` script
 ### Install language tools
 
 - Install pyenv
+- Install jenv
 - Install nvm
 - Install pnpm
 

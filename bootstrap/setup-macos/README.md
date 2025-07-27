@@ -37,6 +37,7 @@ Run the `auto-install.sh` script
 ### Install language tools
 
 - Install pyenv
+- Install jenv
 - Install nvm
 - Install pnpm
 
