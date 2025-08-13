@@ -18,6 +18,8 @@ If you don't have the base requirements yet, I have a guide below that installs 
 **Inside PowerShell**
 
 - choco (package manager inside PowerShell)
+- scoop (another package manager inside PowerShell)
+- winget (default package manager inside PowerShell)
 - git
 
 ---
@@ -48,17 +50,17 @@ If you don't have the base requirements yet, I have a guide below that installs 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-- Git
-
-```ps1
-choco install git -y
-```
-
 - Scoop
 
 ```ps1
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
+- Git
+
+```ps1
+choco install git -y
 ```
 
 ## 2. Auto install PowerShell (choco)
@@ -83,8 +85,13 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 ### Install Windows tools
 
 - powertoys
+
   - Use by `Alt + Space`
   - https://learn.microsoft.com/en-us/windows/powertoys/run
+
+- autohotkey
+
+  - Use for custom keybindings
 
 ### Install fonts
 
@@ -158,11 +165,8 @@ wsl --install
 - With this setup, we can also port it to Linux system
 
 - Learning links:
-
   - https://dev.to/contactsunny/installing-zsh-and-oh-my-zsh-on-windows-11-with-wsl2-1p5i
-
   - https://superuser.com/questions/1110882/how-to-change-default-shell-for-linux-susbsystem-for-windows
-
   - https://medium.com/@smitgabani/advanced-wsl-configuration-2b4888332fff
 
 ```
@@ -240,7 +244,7 @@ Run the `auto-install-wsl.sh` script
 - Install figlet (words to ascii art)
 - Install cowsay (fun ascii art for quotes)
 
-## 4. Copy zshrc-mini to .zshrc inside `sync` folder
+## 4. Copy `zshrc-mini` to `.zshrc` inside `sync` folder
 
 In this folder `setup-windows`, I provide a more minimal zshrc (`zshrc-mini`) for a simple setup, which is ready to develop anything!
 
@@ -248,7 +252,7 @@ For extra stuff, feel free to install them
 
 Please replace the zshrc file in `sync/home` folder
 
-- That's where we will symlink into $HOME
+- That's where we will symlink into `$HOME`
 
 ## 5. Follow instructions in root README.md to symlink dotfiles
 

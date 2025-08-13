@@ -10,6 +10,7 @@ choco install docker-desktop -y
 choco install postman -y
 
 choco install powertoys -y
+choco install autohotkey -y
 
 choco install nerd-fonts-JetBrainsMono -y
 choco install nerd-fonts-NerdFontsSymbolsOnly -y

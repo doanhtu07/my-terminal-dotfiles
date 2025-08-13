@@ -1,5 +1,9 @@
 # === Export basic env variables ===
 
+# TODO: [Mac M1 Issue] - Uncomment this if applicable
+# https://stackoverflow.com/questions/7117184/brew-installation-for-zsh
+# export PATH="/opt/homebrew/bin:$PATH"
+
 # List all java versions: "/usr/libexec/java_home -V"
 # export JAVA_HOME=
 # export ANDROID_HOME=

@@ -96,17 +96,17 @@ Run the `auto-install.sh` script
 - Install fortune (ascii quotes)
 - Install figlet (words to ascii art)
 - Install cowsay (fun ascii art for quotes)
-- Install karabiner elements
+- Install karabiner-elements
 
-## 3. Copy zshrc-mini to .zshrc inside `sync` folder
+## 3. Manually copy `zshrc-mini` to .zshrc inside `sync` folder
 
 In this folder `setup-macos`, I provide a more minimal zshrc (`zshrc-mini`) for a simple setup, which is ready to develop anything!
 
 For extra stuff, feel free to install them
 
-Please replace the zshrc file in `sync/home` folder
+Please replace the `.zshrc` file in `sync/home` folder
 
-- That's where we will symlink into $HOME
+- That's where we will symlink into `$HOME`
 
 ## 4. Follow instructions in root README.md to symlink dotfiles
 
