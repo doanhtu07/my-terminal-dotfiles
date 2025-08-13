@@ -34,6 +34,11 @@ On Windows, the setup is a little bit harder since we need to setup a mix of WSL
 - If you don't follow this lifecycle, you can unexpectedly break the structure of your connections
 - You might end up having to manually remove the symlinks yourselves
 
+One broken example:
+
+- Remove some files or folders without unsyncing first
+- This causes old files and folders to be orphan links
+
 ---
 
 ### MacOS symlinks

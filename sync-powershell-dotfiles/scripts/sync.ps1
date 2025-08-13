@@ -22,6 +22,8 @@ function SyncFolder {
 
 Set-Location .\sync-powershell-dotfiles\sync
 
+SyncFolder -src ".\AutoHotkey" -dest "$HOME\Documents\AutoHotkey"
+
 SyncFolder -src ".\home" -dest "$HOME"
 
 # https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.4
