@@ -44,6 +44,8 @@ brew install --cask nikitabobko/tap/aerospace
 brew install --cask raycast
 brew tap FelixKratz/formulae
 brew install borders
+brew install --cask alt-tab
+brew install --cask dockdoor
 
 brew install fortune
 brew install figlet

@@ -90,6 +90,8 @@ Run the `auto-install.sh` script
 - Install aerospace
 - Install raycast
 - Install JankyBorders
+- Install alt-tab
+- Install dockdoor
 
 ### Install fun stuff
 
