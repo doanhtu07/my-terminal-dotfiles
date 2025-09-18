@@ -30,8 +30,6 @@ If you don't have the base requirements yet, I have a guide below that installs 
 - zsh (shell)
 - brew (package manager inside WSL)
 
----
-
 # Manual install dev software
 
 - Redis Insight:

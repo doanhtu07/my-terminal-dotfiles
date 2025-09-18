@@ -8,6 +8,14 @@ Assuming your machine has these tools installed:
 - zsh (shell)
 - brew (package manager)
 
+# Manual install dev software
+
+- Sidebar (sidebarapp.net):
+
+  - Not available in brew
+  - Helps simulate Windows-like taskbar
+  - Trial for 7 days, then buy license
+
 ## 1. Base setup
 
 These are optional - in case MacOS doesn't have by default
@@ -91,7 +99,6 @@ Run the `auto-install.sh` script
 - Install raycast
 - Install JankyBorders
 - Install alt-tab
-- Install dockdoor
 
 ### Install fun stuff
 
