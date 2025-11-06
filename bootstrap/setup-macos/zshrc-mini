@@ -87,6 +87,8 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Set alias for nvim
 alias nv="nvim"
+
+# Set alias for fzf
 alias fzff='fzf -m --layout=reverse --preview "bat --style=numbers --color=always {}"' # fzf with preview
 alias fzfd='find . -type d | fzf -m --layout=reverse' # fzf directory
 alias fzfcd='DIR=$(fzfd) && cd $DIR' # fzf directory and cd
