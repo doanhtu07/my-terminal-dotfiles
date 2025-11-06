@@ -156,10 +156,15 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Set aliases
 alias nv="nvim"
+
+# Set alias for fzf
 alias fzff='fzf -m --layout=reverse --preview "bat --style=numbers --color=always {}"' # fzf with preview
 alias fzfd='find . -type d | fzf -m --layout=reverse' # fzf directory
 alias fzfcd='DIR=$(fzfd) && cd $DIR' # fzf directory and cd
 alias fzfv='fzff | xargs -r code' # Open selected files in VS Code
+
+# Set alias for converting clipboard into a single line
+alias ol="pbpaste | tr '\n' ' '"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/path.zsh.inc'; fi
