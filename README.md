@@ -10,6 +10,12 @@
 
 [Linux/WSL Neovim config](./sync-wsl-dotfiles/sync/nvim/README.md)
 
+## Setup git worktree
+
+I recommend not directly using branch `main`
+
+But create a local branch `my-local-branch` for your changes
+
 ## Bootstrap environment
 
 When you are on a new machine and you need to boot up an environment from scratch, check out the `bootstrap` folder

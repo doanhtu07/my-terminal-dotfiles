@@ -57,12 +57,6 @@ export PATH="$HOME/custom-bin:$PATH"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
 export ANDROID_HOME=/Users/admin/Library/Android/sdk
 
-# Herd injected PHP binary.
-export PATH="/Users/admin/Library/Application Support/Herd/bin/":$PATH
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/admin/Library/Application Support/Herd/config/php/82/"
-
 # Microsoft vcpkg for C++ library manager
 export VCPKG_ROOT="$HOME/vcpkg"
 
@@ -83,13 +77,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Power Level 10k run code
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Set up pyenv
 # https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-mkdir -p $HOME/.nvim
+# Set up jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+mkdir -p $HOME/.nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -108,12 +112,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# Power Level 10k run code
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -154,7 +152,7 @@ function zvm_after_init() {
 } 
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# Set aliases
+# Set alias for nvim
 alias nv="nvim"
 
 # Set alias for fzf
@@ -165,15 +163,5 @@ alias fzfv='fzff | xargs -r code' # Open selected files in VS Code
 
 # Set alias for converting clipboard into a single line
 alias ol="pbpaste | tr '\n' ' '"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/admin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/admin/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Set up zsh completions for databricks after `brew install databricks`
-fpath+=$(brew --prefix)/share/zsh/site-functions
-autoload -Uz compinit && compinit
 
 # === === ===
