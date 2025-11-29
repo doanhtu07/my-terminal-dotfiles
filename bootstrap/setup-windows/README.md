@@ -207,6 +207,8 @@ Run the `auto-install-wsl.sh` script
   - chruby 3.3.5
 
 - Install lua
+- Install php
+- Install composer
 
 ### Install neovim and cli tools
 

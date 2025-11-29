@@ -55,6 +55,8 @@ Run the `auto-install.sh` script
   - chruby 3.3.5
 
 - Install lua
+- Install php
+- Install composer
 
 ### Install dev tools
 

@@ -19,6 +19,8 @@ brew install nvm
 brew install pnpm
 brew install chruby ruby-install
 brew install lua
+brew install php
+brew install composer
 
 brew install neovim ripgrep fd
 brew install tmux

@@ -41,6 +41,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# Setup PHP composer
+export PATH="$(composer global config home)/vendor/bin:$PATH"
+
+# Setup Laravel Sail
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000

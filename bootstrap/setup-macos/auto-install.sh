@@ -13,6 +13,8 @@ brew install nvm
 brew install pnpm
 brew install chruby ruby-install
 brew install lua
+brew install php
+brew install composer
 
 brew install --cask pgadmin4
 brew install --cask dbeaver-community
