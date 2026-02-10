@@ -1,0 +1,25 @@
+#!/bin/bash
+# olcat.sh
+# Usage: olcat.sh [output-file]
+
+OUTFILE="${1:-output.txt}"
+> "$OUTFILE"
+
+# Read single-line paths from clipboard
+ol() {
+  pbpaste | tr -d "\r" | while IFS= read -r f; do printf "%q " "$f"; done
+}
+FILES=$(ol)
+
+# Reconstruct filenames safely
+eval "set -- $FILES"
+
+# Merge files
+for file in "$@"; do
+  [[ -f "$file" ]] || continue
+  echo -e "=== === FILE: $file === ===\n" >> "$OUTFILE"
+  cat "$file" >> "$OUTFILE"
+  printf "\n\n" >> "$OUTFILE"
+done
+
+echo "Output written to $OUTFILE"
