@@ -163,7 +163,8 @@ alias fzfv='fzff | xargs -r code' # Open selected files in VS Code
 
 # Set alias for converting clipboard into a single line
 ol() {
-  pbpaste | tr -d "\r" | while IFS= read -r f; do printf "%q " "$f"; done
+  pbpaste | tr -d '\r' | paste -sd ' ' -
+  echo
 }
 alias olcat='~/custom-bin/olcat'
 
