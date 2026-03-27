@@ -101,4 +101,12 @@ ol() {
 }
 alias olcat='~/custom-bin/olcat'
 
+# Set alias for converting clipboard into WSL file path
+wslpath_clip() {
+  local win_path
+  win_path=$(powershell.exe -command "Get-Clipboard" | tr -d "\r")
+  wslpath -u "$win_path"
+}
+alias wcp='wslpath_clip'
+
 # === === ===
