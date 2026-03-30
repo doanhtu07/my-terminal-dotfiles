@@ -4,12 +4,6 @@
 
 [Cheatsheets in Notion](https://tudope.notion.site/Cheatsheets-5315b36f45cd41ab899d8f4538bb0e1f?pvs=4)
 
-## My Neovim config
-
-[MacOS Neovim config](./sync-macos-dotfiles/sync/nvim/README.md)
-
-[Linux/WSL Neovim config](./sync-wsl-dotfiles/sync/nvim/README.md)
-
 ## Setup git worktree
 
 I recommend not directly using branch `main`
