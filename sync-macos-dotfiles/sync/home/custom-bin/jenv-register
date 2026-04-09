@@ -1,0 +1,9 @@
+# Add all JDKs from the standard Mac location
+for jdk in /Library/Java/JavaVirtualMachines/*/Contents/Home; do
+    [ -d "$jdk" ] && jenv add "$jdk";
+done
+
+# Add all JDKs from Homebrew
+for jdk in /opt/homebrew/opt/*/libexec/openjdk.jdk/Contents/Home; do
+    [ -d "$jdk" ] && jenv add "$jdk";
+done

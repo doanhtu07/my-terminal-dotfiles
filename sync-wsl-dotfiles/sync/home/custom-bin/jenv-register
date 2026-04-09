@@ -1,0 +1,4 @@
+# Add all JDKs from Homebrew
+for jdk in /home/linuxbrew/.linuxbrew/opt/*/libexec/openjdk.jdk/Contents/Home; do
+  [ -d "$jdk" ] && jenv add "$jdk"
+done
