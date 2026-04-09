@@ -54,7 +54,7 @@ export PATH="/usr/local/opt/bison/bin:$PATH"
 export PATH="$HOME/custom-bin:$PATH"
 
 # List all java versions: "/usr/libexec/java_home -V"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
 export ANDROID_HOME=/Users/admin/Library/Android/sdk
 
 # Microsoft vcpkg for C++ library manager
