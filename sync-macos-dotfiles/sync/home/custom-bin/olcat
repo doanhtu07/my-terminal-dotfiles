@@ -7,7 +7,9 @@ OUTFILE="${1:-output.txt}"
 
 # Read single-line paths from clipboard
 ol() {
-  pbpaste | tr -d "\r" | while IFS= read -r f; do printf "%q " "$f"; done
+  { pbpaste | tr -d "\r"; echo; } | while IFS= read -r f; do
+    [[ -n "$f" ]] && printf "%q " "$f"
+  done
 }
 FILES=$(ol)
 

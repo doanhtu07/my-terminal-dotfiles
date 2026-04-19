@@ -7,7 +7,9 @@ OUTFILE="${1:-output.txt}"
 
 # Read single-line paths from clipboard
 ol() {
-  powershell.exe -command "Get-Clipboard" | tr -d "\r" | while IFS= read -r f; do printf "%q " "$f"; done
+  { powershell.exe -command "Get-Clipboard" | tr -d "\r"; echo; } | while IFS= read -r f; do
+    [[ -n "$f" ]] && printf "%q " "$f"
+  done
 }
 FILES=$(ol)
 
