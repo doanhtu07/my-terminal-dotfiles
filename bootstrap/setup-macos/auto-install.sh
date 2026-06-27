@@ -44,9 +44,9 @@ brew install koekeishiya/formulae/yabai
 brew install koekeishiya/formulae/skhd
 brew install --cask nikitabobko/tap/aerospace
 brew install --cask raycast
-brew tap FelixKratz/formulae
-brew install borders
+brew tap FelixKratz/formulae && brew install borders
 brew install --cask alt-tab
+brew tap otuerk/sidebar && brew install --cask Sidebar
 
 brew install fortune
 brew install figlet

@@ -101,6 +101,7 @@ Run the `auto-install.sh` script
 - Install raycast
 - Install JankyBorders
 - Install alt-tab
+- Install Sidebar
 
 ### Install fun stuff
 
