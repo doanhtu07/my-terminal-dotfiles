@@ -24,6 +24,7 @@ brew install --cask docker
 
 brew install neovim ripgrep fd
 brew install tmux
+brew install herdr
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew install yazi
 brew install eza

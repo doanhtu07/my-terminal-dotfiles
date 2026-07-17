@@ -33,7 +33,6 @@ If you don't have the base requirements yet, I have a guide below that installs 
 # Manual install dev software
 
 - Redis Insight:
-
   - Not available on winget or choco yet
   - Only downloadable through their website
   - You can also install with brew inside WSL
@@ -83,12 +82,10 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 ### Install Windows tools
 
 - powertoys
-
   - Use by `Alt + Space`
   - https://learn.microsoft.com/en-us/windows/powertoys/run
 
 - autohotkey
-
   - Use for custom keybindings
 
 ### Install fonts
@@ -202,7 +199,6 @@ Run the `auto-install-wsl.sh` script
 - Install pnpm
 
 - Install chruby and ruby-install (https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
-
   - Check versions at ~/.rubies/
   - chruby 3.3.5
 
@@ -216,6 +212,7 @@ Run the `auto-install-wsl.sh` script
   - Install ripgrep (needed by `telescope` and `fzf-lua`)
   - Install fd (needed by `telescope` and `fzf-lua`)
 - Install tmux
+- Install herdr
 - Install yazi
 - Install eza (better ls)
 - Install zoxide (better cd)

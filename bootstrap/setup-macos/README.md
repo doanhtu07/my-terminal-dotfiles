@@ -11,7 +11,6 @@ Assuming your machine has these tools installed:
 # Manual install dev software
 
 - Sidebar (sidebarapp.net):
-
   - Not available in brew
   - Helps simulate Windows-like taskbar
   - Trial for 7 days, then buy license
@@ -50,7 +49,6 @@ Run the `auto-install.sh` script
 - Install pnpm
 
 - Install chruby and ruby-install (https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
-
   - Check versions at ~/.rubies/
   - chruby 3.3.5
 
@@ -72,6 +70,7 @@ Run the `auto-install.sh` script
   - Install ripgrep (needed by `telescope` and `fzf-lua`)
   - Install fd (needed by `telescope` and `fzf-lua`)
 - Install tmux
+- Install herdr
 - Install yazi
 - Install eza (better ls)
 - Install zoxide (better cd)
