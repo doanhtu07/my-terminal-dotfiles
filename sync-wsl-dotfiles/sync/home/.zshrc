@@ -110,4 +110,7 @@ wslpath_clip() {
 }
 alias wcp='wslpath_clip'
 
+# Set alias for herdr
+alias hwc='herdr workspace create --cwd $(pwd) --focus && herdr'
+
 # === === ===

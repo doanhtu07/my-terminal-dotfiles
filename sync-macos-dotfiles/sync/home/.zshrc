@@ -169,4 +169,7 @@ ol() {
 }
 alias olcat='~/custom-bin/olcat'
 
+# Set alias for herdr
+alias hwc='herdr workspace create --cwd $(pwd) --focus && herdr'
+
 # === === ===
