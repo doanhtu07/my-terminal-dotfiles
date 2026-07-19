@@ -173,4 +173,10 @@ alias olcat='~/custom-bin/olcat'
 alias hwc='herdr workspace create --cwd $(pwd) --focus && herdr'
 alias hcl='unset HERDR_ENV HERDR_PANE_ID HERDR_WORKSPACE_ID HERDR_SOCKET_PATH HERDR_TAB_ID'
 
+# Herdr focus on the workspace with the current working directory
+hfc() {
+  local ws_id=$(herdr pane list | jq -r --arg cwd "$PWD" '.result.panes[] | select(.cwd == $cwd) | .workspace_id' | head -1)
+  [ -n "$ws_id" ] && herdr workspace focus "$ws_id"
+}
+
 # === === ===
