@@ -112,5 +112,6 @@ alias wcp='wslpath_clip'
 
 # Set alias for herdr
 alias hwc='herdr workspace create --cwd $(pwd) --focus && herdr'
+alias hcl='unset HERDR_ENV HERDR_PANE_ID HERDR_WORKSPACE_ID HERDR_SOCKET_PATH HERDR_TAB_ID'
 
 # === === ===
