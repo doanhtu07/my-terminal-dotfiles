@@ -66,9 +66,12 @@ Run the `auto-install.sh` script
 
 ### Install neovim and cli tools
 
-- Install neovim
+- Install neovim (AstroNvim distro)
   - Install ripgrep (needed by `telescope` and `fzf-lua`)
   - Install fd (needed by `telescope` and `fzf-lua`)
+  - Install lazygit (better git cli)
+  - Install gdu (disk usage toggle terminal)
+  - Install bottom (process viewer toggle terminal)
 - Install tmux
 - Install herdr
 - Install yazi

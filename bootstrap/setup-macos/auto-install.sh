@@ -22,7 +22,7 @@ brew install --cask beekeeper-studio
 brew install --cask redis-insight
 brew install --cask docker
 
-brew install neovim ripgrep fd
+brew install neovim ripgrep fd lazygit gdu bottom
 brew install tmux
 brew install herdr
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
