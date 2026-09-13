@@ -25,29 +25,15 @@ echo "========================================"
 echo
 
 echo "--- Formulae ---"
-formulae=$(brew list --formula 2>/dev/null | grep -Ei 'java|jdk|openjdk')
-
-if [ -n "$formulae" ]; then
-  while IFS= read -r formula; do
-    version=$(brew list --versions "$formula" 2>/dev/null)
-    echo "  $version"
-  done <<< "$formulae"
-else
-  echo "  None"
-fi
+brew list --formula --versions 2>/dev/null \
+    | grep -Ei 'java|jdk|openjdk' \
+    || echo "  None"
 
 echo
 echo "--- Casks ---"
-casks=$(brew list --cask 2>/dev/null | grep -Ei 'java|jdk|temurin|zulu')
-
-if [ -n "$casks" ]; then
-  while IFS= read -r cask; do
-    version=$(brew list --versions "$cask" 2>/dev/null)
-    echo "  $version"
-  done <<< "$casks"
-else
-  echo "  None"
-fi
+brew list --cask --versions 2>/dev/null \
+    | grep -Ei 'java|jdk|temurin|zulu' \
+    || echo "  None"
 
 echo
 echo "========================================"
