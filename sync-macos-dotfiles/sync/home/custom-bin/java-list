@@ -1,0 +1,67 @@
+#!/bin/bash
+
+echo "========================================"
+echo " Java installations on macOS"
+echo "========================================"
+echo
+
+echo "=== Current Java ==="
+echo "Executable: $(which java 2>/dev/null || echo 'Not found')"
+java -version 2>&1 | head -1 || true
+echo "JAVA_HOME: ${JAVA_HOME:-<not set>}"
+echo
+
+echo "========================================"
+echo "=== macOS registered JDKs ==="
+echo "========================================"
+echo
+
+/usr/libexec/java_home -V 2>&1
+
+echo
+echo "========================================"
+echo "=== Homebrew Java ==="
+echo "========================================"
+echo
+
+echo "--- Formulae ---"
+formulae=$(brew list --formula 2>/dev/null | grep -Ei 'java|jdk|openjdk')
+
+if [ -n "$formulae" ]; then
+  while IFS= read -r formula; do
+    version=$(brew list --versions "$formula" 2>/dev/null)
+    echo "  $version"
+  done <<< "$formulae"
+else
+  echo "  None"
+fi
+
+echo
+echo "--- Casks ---"
+casks=$(brew list --cask 2>/dev/null | grep -Ei 'java|jdk|temurin|zulu')
+
+if [ -n "$casks" ]; then
+  while IFS= read -r cask; do
+    version=$(brew list --versions "$cask" 2>/dev/null)
+    echo "  $version"
+  done <<< "$casks"
+else
+  echo "  None"
+fi
+
+echo
+echo "========================================"
+echo "=== Installed JDK directories ==="
+echo "========================================"
+echo
+
+for jdk in /Library/Java/JavaVirtualMachines/*.jdk/Contents/Home; do
+  if [ -x "$jdk/bin/java" ]; then
+    version=$("$jdk/bin/java" -version 2>&1 | head -1)
+    arch=$(file "$jdk/bin/java" | sed 's/.*: //')
+    echo "  $jdk"
+    echo "    $version"
+    echo "    $arch"
+    echo
+  fi
+done
