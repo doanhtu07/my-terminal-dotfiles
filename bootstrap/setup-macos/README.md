@@ -63,6 +63,7 @@ Run the `auto-install.sh` script
 - beekeeper-studio
 - redis-insight
 - docker
+- xcodes
 
 ### Install neovim and cli tools
 
