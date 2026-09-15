@@ -64,6 +64,7 @@ Run the `auto-install.sh` script
 - redis-insight
 - docker
 - xcodes
+- aria2
 
 ### Install neovim and cli tools
 

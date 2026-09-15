@@ -22,6 +22,7 @@ brew install --cask beekeeper-studio
 brew install --cask redis-insight
 brew install --cask docker
 brew install xcodes
+brew install aria2
 
 brew install neovim ripgrep fd lazygit gdu bottom
 brew install tmux
