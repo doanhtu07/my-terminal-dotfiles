@@ -98,7 +98,7 @@ Run the `auto-install.sh` script
 - Install zsh-autosuggestions
 - Install zsh-syntax-highlighting
 
-### Install window management
+### Install computer control tools
 
 - Install yabai
 - Install skhd
@@ -107,13 +107,14 @@ Run the `auto-install.sh` script
 - Install JankyBorders
 - Install alt-tab
 - Install Sidebar
+- Install karabiner-elements
+- Install monitorcontrol
 
 ### Install fun stuff
 
 - Install fortune (ascii quotes)
 - Install figlet (words to ascii art)
 - Install cowsay (fun ascii art for quotes)
-- Install karabiner-elements
 
 ## 3. Manually copy `zshrc-mini` to .zshrc inside `sync` folder
 

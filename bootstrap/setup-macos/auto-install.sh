@@ -51,8 +51,9 @@ brew install --cask raycast
 brew tap FelixKratz/formulae && brew install borders
 brew install --cask alt-tab
 brew tap otuerk/sidebar && brew install --cask Sidebar
+brew install --cask karabiner-elements
+brew install --cask monitorcontrol
 
 brew install fortune
 brew install figlet
 brew install cowsay
-brew install --cask karabiner-elements
