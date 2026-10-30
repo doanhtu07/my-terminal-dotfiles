@@ -178,4 +178,7 @@ hfc() {
   [ -n "$ws_id" ] && herdr workspace focus "$ws_id"
 }
 
+# Set alias for herdr-core
+alias hcv='hc attach --observe --history 10000'
+
 # === === ===
