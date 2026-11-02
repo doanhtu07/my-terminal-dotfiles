@@ -24,7 +24,6 @@ brew install --cask redis-insight
 brew install --cask docker
 brew install xcodes
 brew install aria2
-brew install --cask t3-code
 
 brew install neovim ripgrep fd lazygit gdu bottom
 brew install tmux
