@@ -2,6 +2,7 @@ brew update
 
 brew install --cask wezterm
 brew install --cask visual-studio-code
+brew install --cask herdr-app
 
 # https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e
 brew install --cask font-jetbrains-mono-nerd-font
@@ -53,6 +54,7 @@ brew install --cask alt-tab
 brew tap otuerk/sidebar && brew install --cask Sidebar
 brew install --cask karabiner-elements
 brew install --cask monitorcontrol
+brew install --cask keepingyouawake
 
 brew install fortune
 brew install figlet

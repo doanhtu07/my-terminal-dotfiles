@@ -36,6 +36,7 @@ Run the `auto-install.sh` script
 
 - Install wezterm
 - Install vscode
+- Install herdr-app
 
 ### Install fonts
 
@@ -109,6 +110,7 @@ Run the `auto-install.sh` script
 - Install Sidebar
 - Install karabiner-elements
 - Install monitorcontrol
+- Install KeepingYouAwake
 
 ### Install fun stuff
 
