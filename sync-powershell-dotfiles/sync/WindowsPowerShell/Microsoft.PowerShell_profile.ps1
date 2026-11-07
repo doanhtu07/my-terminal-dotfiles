@@ -44,6 +44,7 @@ if (Test-Path($ChocolateyProfile)) {
 Import-Module PSReadLine -ErrorAction SilentlyContinue
 if (Get-Module PSReadLine) {
   Set-PSReadLineOption -EditMode Vi
+  Set-PSReadLineOption -ViModeIndicator Cursor
   Set-PSReadLineOption -HistorySearchCursorMovesToEnd
   Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
   Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
