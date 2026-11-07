@@ -114,6 +114,10 @@ Run the `auto-install-powershell-choco.ps1` script inside Administrator PowerShe
 - scoop installs packages per-user by default
 - To install packages globally, use `sudo scoop install -g <packages>`
 
+### Install language tools
+
+- uv
+
 ### Install cli tools
 
 - yazi
@@ -194,6 +198,7 @@ Run the `auto-install-wsl.sh` script
 ### Install language tools
 
 - Install pyenv
+- Install uv
 - Install jenv
 - Install nvm
 - Install pnpm
@@ -206,11 +211,19 @@ Run the `auto-install-wsl.sh` script
 - Install php
 - Install composer
 
-### Install neovim and cli tools
+### Install dev tools
 
-- Install neovim
+- opencode
+
+### Install cli tools
+
+- Install neovim (AstroNvim distro)
   - Install ripgrep (needed by `telescope` and `fzf-lua`)
   - Install fd (needed by `telescope` and `fzf-lua`)
+  - Install lazygit (better git cli)
+  - Install gdu (disk usage toggle terminal)
+  - Install bottom (process viewer toggle terminal)
+
 - Install tmux
 - Install herdr
 - Install yazi

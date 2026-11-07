@@ -67,6 +67,7 @@ Run the `auto-install.sh` script
 - docker
 - xcodes
 - aria2
+- opencode
 
 ### Install neovim and cli tools
 

@@ -14,6 +14,7 @@ brew install font-jetbrains-mono-nerd-font
 brew install font-symbols-only-nerd-font
 
 brew install pyenv
+brew install uv
 brew install jenv
 brew install nvm
 brew install pnpm
@@ -22,7 +23,9 @@ brew install lua
 brew install php
 brew install composer
 
-brew install neovim ripgrep fd
+brew install anomalyco/tap/opencode-v2
+
+brew install neovim ripgrep fd lazygit gdu bottom
 brew install tmux
 brew install herdr
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

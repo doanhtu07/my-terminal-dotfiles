@@ -1,3 +1,5 @@
+scoop install main/uv
+
 scoop install yazi
 scoop install ffmpeg 7zip poppler fd zoxide
 scoop install fzf bat
