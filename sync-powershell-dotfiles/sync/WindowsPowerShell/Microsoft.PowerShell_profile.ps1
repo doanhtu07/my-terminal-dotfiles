@@ -39,3 +39,38 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
+
+# Shell enhancements shared by Windows PowerShell 5.1 and PowerShell 7.
+Import-Module PSReadLine -ErrorAction SilentlyContinue
+if (Get-Module PSReadLine) {
+  Set-PSReadLineOption -EditMode Vi
+  Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+  Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+  Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+  # Prediction support is included in the PSReadLine version shipped with PowerShell 7.
+  if ($PSVersionTable.PSVersion.Major -ge 7 -and (Get-Module PSReadLine).Version -ge [version]'2.2.0') {
+    Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+    Set-PSReadLineOption -PredictionViewStyle ListView
+  }
+}
+
+Import-Module Terminal-Icons -ErrorAction SilentlyContinue
+Import-Module posh-git -ErrorAction SilentlyContinue
+Import-Module PSFzf -ErrorAction SilentlyContinue
+
+if (Get-Command Set-PsFzfOption -ErrorAction SilentlyContinue) {
+  Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+}
+
+if (Get-Command zoxide -ErrorAction SilentlyContinue) {
+  Invoke-Expression (& { (zoxide init powershell | Out-String) })
+}
+
+# Initialize Oh My Posh last so its Git-aware prompt takes precedence over posh-git.
+if ($PSVersionTable.PSVersion.Major -ge 7 -and (Get-Command oh-my-posh -ErrorAction SilentlyContinue)) {
+  $poshConfig = Join-Path $PSScriptRoot 'catppuccin_mocha.omp.json'
+  if (Test-Path -LiteralPath $poshConfig) {
+    oh-my-posh init pwsh --config $poshConfig | Invoke-Expression
+  }
+}

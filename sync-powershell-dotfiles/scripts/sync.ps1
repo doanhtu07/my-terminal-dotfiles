@@ -28,6 +28,7 @@ SyncFolder -src ".\home" -dest "$HOME"
 
 # https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.4
 SyncFolder -src ".\WindowsPowerShell" -dest "$HOME\Documents\WindowsPowerShell"
+SyncFolder -src ".\WindowsPowerShell" -dest "$HOME\Documents\PowerShell"
 
 SyncFolder -src ".\yazi" -dest "$env:AppData\yazi\config"
 

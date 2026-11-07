@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 
 -- Spawn a powershell as the default shell
 -- Help link: https://www.reddit.com/r/wezterm/comments/18l1fku/set_powershell_as_default_instead_of_cmd/
-config.default_prog = { 'powershell.exe' }
+config.default_prog = { 'pwsh.exe' }
 
 config.max_fps = 120
 
@@ -35,8 +35,8 @@ config.window_background_opacity = 0.8
 -- https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
--- "JetBrains Mono", "Menlo"
-config.font = wezterm.font("JetBrains Mono")
+-- "JetBrainsMono Nerd Font", "Menlo"
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.line_height = 1.2
 
 -- Make font more bold
@@ -45,12 +45,12 @@ config.font_rules = {
 	{
 		intensity = "Bold",
 		italic = false,
-		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Normal" }),
+		font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold", stretch = "Normal", style = "Normal" }),
 	},
 	{
 		intensity = "Bold",
 		italic = true,
-		font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Italic" }),
+		font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold", stretch = "Normal", style = "Italic" }),
 	},
 }
 

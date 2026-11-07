@@ -19,7 +19,7 @@ Assuming your machine has these tools installed:
 
 These are optional - in case MacOS doesn't have by default
 
-```
+```bash
 # Zsh
 brew install zsh
 chsh -s /bin/zsh
@@ -34,29 +34,29 @@ Run the `auto-install.sh` script
 
 ### Install terminal and editor
 
-- Install wezterm
-- Install vscode
-- Install herdr-app
+- wezterm
+- vscode
+- herdr-app
 
 ### Install fonts
 
-- Setup fonts
+- Set up fonts for your terminal
 
 ### Install language tools
 
-- Install pyenv
-- Install uv
-- Install jenv
-- Install nvm
-- Install pnpm
+- pyenv
+- uv
+- jenv
+- nvm
+- pnpm
 
-- Install chruby and ruby-install (https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
+- chruby and ruby-install (https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
   - Check versions at ~/.rubies/
   - chruby 3.3.5
 
-- Install lua
-- Install php
-- Install composer
+- lua
+- php
+- composer
 
 ### Install dev tools
 
@@ -71,53 +71,54 @@ Run the `auto-install.sh` script
 
 ### Install neovim and cli tools
 
-- Install neovim (AstroNvim distro)
-  - Install ripgrep (needed by `telescope` and `fzf-lua`)
-  - Install fd (needed by `telescope` and `fzf-lua`)
-  - Install lazygit (better git cli)
-  - Install gdu (disk usage toggle terminal)
-  - Install bottom (process viewer toggle terminal)
-- Install tmux
-- Install herdr
-- Install yazi
-- Install eza (better ls)
-- Install zoxide (better cd)
-- Install fzf (better search)
-- Install bat (file preview with syntax highlighting)
-- Install diff-so-fancy (better git diff view)
-- Install stow
+- neovim (AstroNvim distro)
+  - ripgrep (needed by `telescope` and `fzf-lua`)
+  - fd (needed by `telescope` and `fzf-lua`)
+  - lazygit (better git cli)
+  - gdu (disk usage toggle terminal)
+  - bottom (process viewer toggle terminal)
+
+- tmux
+- herdr
+- yazi
+- eza (better ls)
+- zoxide (better cd)
+- fzf (better search)
+- bat (file preview with syntax highlighting)
+- diff-so-fancy (better git diff view)
+- stow
 
 ### Install git tools
 
-- Install gh:
+- gh:
   - `gh auth login`
   - `gh setup-git`
 
 ### Install cli goodies
 
-- Install power10k theme
-- Install vim mode for zsh
-- Install zsh-autosuggestions
-- Install zsh-syntax-highlighting
+- power10k theme
+- vim mode for zsh
+- zsh-autosuggestions
+- zsh-syntax-highlighting
 
 ### Install computer control tools
 
-- Install yabai
-- Install skhd
-- Install aerospace
-- Install raycast
-- Install JankyBorders
-- Install alt-tab
-- Install Sidebar
-- Install karabiner-elements
-- Install monitorcontrol
-- Install KeepingYouAwake
+- yabai
+- skhd
+- aerospace
+- raycast
+- JankyBorders
+- alt-tab
+- Sidebar
+- karabiner-elements
+- monitorcontrol
+- KeepingYouAwake
 
 ### Install fun stuff
 
-- Install fortune (ascii quotes)
-- Install figlet (words to ascii art)
-- Install cowsay (fun ascii art for quotes)
+- fortune (ascii quotes)
+- figlet (words to ascii art)
+- cowsay (fun ascii art for quotes)
 
 ## 3. Manually copy `zshrc-mini` to .zshrc inside `sync` folder
 
