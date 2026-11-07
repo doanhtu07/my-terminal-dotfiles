@@ -35,6 +35,17 @@
           "type": "path"
         },
         {
+          "foreground": "p:blue",
+          "options": {
+            "display_mode": "environment",
+            "fetch_virtual_env": true,
+            "folder_name_fallback": false
+          },
+          "style": "plain",
+          "template": "{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }} ",
+          "type": "python"
+        },
+        {
           "foreground": "p:lavender",
           "options": {
             "branch_icon": "\ue725 ",
