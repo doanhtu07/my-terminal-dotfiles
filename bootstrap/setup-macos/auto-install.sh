@@ -26,6 +26,7 @@ brew install --cask docker
 brew install xcodes
 brew install aria2
 brew install anomalyco/tap/opencode-v2
+brew install --cask tailscale-app
 
 brew install neovim ripgrep fd lazygit gdu bottom
 brew install tmux

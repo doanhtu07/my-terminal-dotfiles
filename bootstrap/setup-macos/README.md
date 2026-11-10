@@ -68,6 +68,7 @@ Run the `auto-install.sh` script
 - xcodes
 - aria2
 - opencode
+- tailscale-app
 
 ### Install neovim and cli tools
 
