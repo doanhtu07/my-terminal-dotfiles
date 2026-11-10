@@ -69,6 +69,7 @@ Run the `auto-install.sh` script
 - aria2
 - opencode
 - tailscale-app
+- rtk
 
 ### Install neovim and cli tools
 
