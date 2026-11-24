@@ -36,6 +36,7 @@ Run the `auto-install.sh` script
 
 - wezterm
 - vscode
+- zed
 - herdr-app
 
 ### Install fonts

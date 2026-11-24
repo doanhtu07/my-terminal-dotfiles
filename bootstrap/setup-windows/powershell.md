@@ -101,9 +101,10 @@ Run `auto-install-powershell-winget.ps1` from PowerShell.
 
 - PowerShell 7 (`pwsh`); Windows PowerShell 5.1 remains installed with Windows.
 
-### Install terminal
+### Install terminal and editor
 
 - Windows Terminal
+- Zed
 
 ### Install prompt
 

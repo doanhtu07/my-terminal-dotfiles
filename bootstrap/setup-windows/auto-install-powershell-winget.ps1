@@ -3,6 +3,7 @@ $ErrorActionPreference = 'Stop'
 $wingetPackages = @(
   'Microsoft.PowerShell',
   'Microsoft.WindowsTerminal',
+  'ZedIndustries.Zed'
   'JanDeDobbeleer.OhMyPosh',
   'glzr-io.glazewm'
 )
